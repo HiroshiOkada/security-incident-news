@@ -1,6 +1,57 @@
 {
- "generated_at": "2026-11-17T19:41:30+09:00",
+ "generated_at": "2026-11-18T07:37:57+09:00",
  "incidents": [
+  {
+   "id": "2026-11-17-java4shell-cve-2026-114938",
+   "event_date": "2026-11-17",
+   "category": "vulnerability",
+   "region": "world",
+   "severity": "critical",
+   "title": "Javaに認証不要のリモートコード実行脆弱性「Java4Shell」、Oracleが正式公表 CISAも緊急パッチ呼びかけ",
+   "lead": "Oracleは17日、Java SEに認証不要で悪用可能なリモートコード実行（RCE）脆弱性が存在することを正式に公表した。通称「Java4Shell」（CVE-2026-114938）と呼ばれるこの脆弱性は、x86-64版HotSpot Java仮想マシンのBase64デコーダにメモリ破壊の問題があり、細工したデータを送り込むだけで任意のコードを実行できる。",
+   "cause": "Java 17、21、25、27など広範なバージョンに影響するメモリ破壊の脆弱性で、認証なしにリモートから悪用可能。CISAは「Java4Shell」と呼び、直ちにパッチを適用するよう警告している。",
+   "impact": "Javaはサーバーサイド、デスクトップ、組込みなど世界中のシステムで広く使われており、影響範囲は極めて大きい。悪用が確認されたかは現時点で不明だが、CISAがKnown Exploited Vulnerabilitiesカタログに追加するかどうかが注目される。",
+   "ai_angle": "AIの関与は確認されていない。ただし、AIによる自動脆弱性スキャンや悪用コード生成が進む中、このような認証不要のRCE脆弱性はAI攻撃フレームワークによって迅速に武器化されるリスクが高い。組織はAIを活用した脆弱性検知・パッチ優先順位付けの自動化を急ぐべきである。",
+   "tags": [
+    "Java",
+    "RCE",
+    "CVE-2026-114938",
+    "Java4Shell"
+   ],
+   "keywords": [
+    "CVE-2026-114938",
+    "Java4Shell",
+    "Oracle Java",
+    "OpenJDK",
+    "リモートコード実行",
+    "Base64デコーダ",
+    "HotSpot JVM"
+   ],
+   "status": "ongoing",
+   "sources": [
+    {
+     "title": "Critical Java Vulnerability Requires Immediate Patching",
+     "url": "https://www.cisa.gov/news-events/alerts/2026/11/17/critical-java-vulnerability-requires-immediate-patching",
+     "publisher": "CISA Advisories",
+     "published": "2026-11-17"
+    },
+    {
+     "title": "Oracle to Patch 11 Java Flaws Today as Critical OpenJDK RCE (CVE-2026-114938) Report Emerges",
+     "url": "https://thehackernews.com/2026/11/oracle-to-patch-11-java-flaws-today-as.html",
+     "publisher": "The Hacker News",
+     "published": "2026-11-18"
+    },
+    {
+     "title": "CVE-2026-114938: Reported Critical Pre-authentication Remote Code Execution in Java 17",
+     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPUjdhelluN2N6QUlPZ2ZXYWhIczhHZ2tPMFZ6Y2c3eW82bDctZTZGQnl5X0xJZkxlSWRxcXRoYWVuMXJiZGdDT0w1Wk4wemJMYlF4N3E2cnJQejNNbWtqQW9FVTNfTUhBZ2laZ2ZYZUs4clpRMmNTTGtuNlp5SFM2QXVYYnpjSzIwOGp2MmFMWUlSYVRyQkR6VkhyMXdvRkgwZ0dfdk1TQjJDQ2RsOW9MdnpLWjhIUUJwZ1NpUg?oc=5",
+     "publisher": "Rapid7",
+     "published": "2026-11-18"
+    }
+   ],
+   "timeline": [],
+   "created_at": "2026-11-18T07:36:50+09:00",
+   "updated_at": "2026-11-18T07:36:50+09:00"
+  },
   {
    "id": "2026-11-17-rakuten-securities-breach",
    "event_date": "2026-11-17",
@@ -67,10 +118,17 @@
      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9KY2NkbzNLV1BWdjNvMDU1azgybFAxNHYwcDQ1VzF0X2NzVjVtX1lHR2thazdHQU82SFZzZXZKcFQxUWJ2LWVBSXBJX0pIcDhlWEN0Vjhla0k3bW10NUprWjFSbnAtYURIQnc?oc=5",
      "publisher": "ITmedia",
      "title": "楽天証券に不正アクセス、最大1125万口座のIDなど漏えいか 最大447万口座は金融資産情報も"
+    },
+    {
+     "date": "2026-11-17",
+     "note": "楽天証券の不正アクセスで、漏えいした可能性がある顧客情報が最大1572万件に上ると日テレNEWSが報じた。従来の1125万口座・447万口座という集計より規模が拡大している。",
+     "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE12cTVQR0dDeW9JTU1iU3A0MEdxRFV0WDJsMlZMX1p3VVBzRjdpMXJBVUFmUjBNQ1N3NzlfdmtjMzVkTU1XVEdPWWg4TVB6THlOZnNOcElDdWRFTmNVWnRrY256Z1BCaDhYWXhialZBektpUFptbzNkY211dW0?oc=5",
+     "publisher": "日テレNEWS NNN",
+     "title": "楽天証券に不正アクセス 顧客情報が漏えいした可能性 最大1572万件（2026年11月17日掲載）"
     }
    ],
    "created_at": "2026-11-17T19:38:38+09:00",
-   "updated_at": "2026-11-17T19:42:17+09:00"
+   "updated_at": "2026-11-18T07:36:52+09:00"
   },
   {
    "id": "2026-11-17-jins-data-breach",
@@ -215,9 +273,17 @@
      "published": "2026-11-17"
     }
    ],
-   "timeline": [],
+   "timeline": [
+    {
+     "date": "2026-11-18",
+     "note": "Optimizelyは、顧客サイトに攻撃者が悪意あるコードを埋め込んだことを確認した。研究者は178のサイトで悪意あるJavaScriptを検出しており、被害規模の一部が明らかになった。",
+     "url": "https://therecord.media/optimizely-malicious-code-customer-sites",
+     "publisher": "The Record",
+     "title": "Website management platform Optimizely confirms hackers put malicious code into customer sites"
+    }
+   ],
    "created_at": "2026-11-17T19:35:21+09:00",
-   "updated_at": "2026-11-17T19:35:21+09:00"
+   "updated_at": "2026-11-18T07:36:56+09:00"
   },
   {
    "id": "2026-11-13-check-point-php2shell-tsga",
