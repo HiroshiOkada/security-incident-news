@@ -46,44 +46,6 @@
    "updated_at": "2026-11-17T19:41:06+09:00"
   },
   {
-   "id": "2026-11-17-rakuten-securities-breach-2",
-   "event_date": "2026-11-17",
-   "category": "breach",
-   "region": "jp",
-   "severity": "critical",
-   "title": "楽天証券に不正アクセス、最大1125万口座のID漏えいか 447万口座は金融資産情報も",
-   "lead": "楽天証券に不正アクセスがあり、最大1125万口座のIDなどの情報が漏えいした可能性があると報じられた。うち最大447万口座については金融資産情報も漏えいした可能性があるという。証券口座は資産と直結するため、なりすましや標的型攻撃への悪用が懸念される。",
-   "cause": "外部からの不正アクセスによるものと報じられているが、侵入経路や悪用された脆弱性の詳細、攻撃者の特定状況は明らかにされていない。",
-   "impact": "最大1125万口座分のIDなどの情報、さらに最大447万口座分の金融資産情報が漏えいした可能性がある。口座数ベースでは証券業界でも最大級の規模となり、不正ログインやフィッシングによる資産窃取リスク、顧客離れや信用低下といった事業影響が想定される。",
-   "ai_angle": "AIの関与は確認されていない。示唆として、漏えいしたID群は生成AIで自然文を量産した標的型フィッシングの名簿になり得るため、不審メールの検知だけでなく、顧客側のパスワード再利用や不審ログインをAIで相関検知する仕組みの有無が実被害の差を分ける。",
-   "tags": [
-    "情報漏えい",
-    "不正アクセス",
-    "金融",
-    "証券"
-   ],
-   "keywords": [
-    "楽天証券",
-    "不正アクセス",
-    "口座情報",
-    "金融資産情報",
-    "1125万口座",
-    "フィッシング"
-   ],
-   "status": "ongoing",
-   "sources": [
-    {
-     "title": "楽天証券に不正アクセス、最大1125万口座のIDなど漏えいか 最大447万口座は金融資産情報も",
-     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9KY2NkbzNLV1BWdjNvMDU1azgybFAxNHYwcDQ1VzF0X2NzVjVtX1lHR2thazdHQU82SFZzZXZKcFQxUWJ2LWVBSXBJX0pIcDhlWEN0Vjhla0k3bW10NUprWjFSbnAtYURIQnc?oc=5",
-     "publisher": "ITmedia",
-     "published": "2026-11-17"
-    }
-   ],
-   "timeline": [],
-   "created_at": "2026-11-17T19:40:52+09:00",
-   "updated_at": "2026-11-17T19:40:52+09:00"
-  },
-  {
    "id": "2026-11-17-rakuten-securities-breach",
    "event_date": "2026-11-17",
    "category": "breach",
@@ -134,6 +96,12 @@
      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5aak01ZVBxeEJWc0tkZ3gtR09ETlRnUUNRZnJhbXpkTEE4TFlvZkQ2WUpGOGowZjRjTFcxN1p5RjFpU3dUY19nbEJudW5GZ0dRYV9tcUFIcEtxLU9MNXg0WW5LdmZtaVJTdzgyZm5zTFk0X195eENCLXZrSTlkTEU?oc=5",
      "publisher": "Yahoo!ニュース",
      "published": "2026-11-17"
+    },
+    {
+     "title": "楽天証券に不正アクセス、最大1125万口座のIDなど漏えいか 最大447万口座は金融資産情報も",
+     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9KY2NkbzNLV1BWdjNvMDU1azgybFAxNHYwcDQ1VzF0X2NzVjVtX1lHR2thazdHQU82SFZzZXZKcFQxUWJ2LWVBSXBJX0pIcDhlWEN0Vjhla0k3bW10NUprWjFSbnAtYURIQnc?oc=5",
+     "publisher": "ITmedia",
+     "published": "2026-11-17"
     }
    ],
    "timeline": [
@@ -146,7 +114,7 @@
     }
    ],
    "created_at": "2026-11-17T19:38:38+09:00",
-   "updated_at": "2026-11-17T19:40:55+09:00"
+   "updated_at": "2026-11-17T19:42:17+09:00"
   },
   {
    "id": "2026-11-17-fugaku-unauthorized-access",

@@ -16,6 +16,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
+import difflib
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -181,6 +182,34 @@ def build_candidate_block(items: list[dict]) -> str:
     return "\n".join(lines)
 
 
+def find_duplicate(new: dict, incidents: list[dict]) -> dict | None:
+    """既存記事と同一事件かどうかを判定する（キーワード重複 or タイトル類似）。"""
+    kw_new = {k.lower() for k in new.get("keywords", []) if len(k) >= 2}
+    for inc in incidents:
+        gap = abs(
+            (datetime.fromisoformat(new["event_date"]) - datetime.fromisoformat(inc["event_date"])).days
+        )
+        if gap > 14:
+            continue
+        kw_old = {k.lower() for k in inc.get("keywords", []) if len(k) >= 2}
+        overlap = len(kw_new & kw_old) / min(len(kw_new), len(kw_old)) if kw_new and kw_old else 0
+        ratio = difflib.SequenceMatcher(None, new["title"], inc["title"]).ratio()
+        if overlap >= 0.5 or ratio >= 0.6:
+            return inc
+    return None
+
+
+def merge_into(target: dict, source: dict) -> None:
+    known = {s["url"] for s in target.get("sources", [])}
+    extra = [s for s in source.get("sources", []) if s["url"] not in known]
+    if extra:
+        target.setdefault("sources", []).extend(extra)
+        target["sources"] = target["sources"][:8]
+    if source.get("severity") == "critical":
+        target["severity"] = "critical"
+    target["updated_at"] = now_jst().isoformat(timespec="seconds")
+
+
 def make_id(event_date: str, slug: str, taken: set[str]) -> str:
     slug = re.sub(r"[^a-z0-9\-]+", "-", slug.lower()).strip("-")[:48] or "incident"
     base = f"{event_date}-{slug}"
@@ -264,8 +293,12 @@ def curate_new(raw_items: list[dict], incidents: list[dict], skipped: dict) -> t
     prompt = (
         "以下は直近のセキュリティ関連記事の候補です。この中から掲載すべき重大インシデントを選び、"
         "日本語の記事を書いてください（通常は最大 1 件、同日に複数の重大事件がある場合のみ最大 3 件）。"
-        "該当が無ければ incidents を空にしてください。\n\n" + build_candidate_block(candidates)
+        "該当が無ければ incidents を空にしてください。\n\n"
     )
+    if incidents:
+        recent = "\n".join(f"- {inc['event_date']} {inc['title']}" for inc in incidents[:10])
+        prompt += f"【掲載済みの事件（同じ事件は選ばないこと）】\n{recent}\n\n"
+    prompt += build_candidate_block(candidates)
     result = call_llm(
         [{"role": "system", "content": SELECTION_SYSTEM}, {"role": "user", "content": prompt}],
         max_tokens=4000,
@@ -280,6 +313,13 @@ def curate_new(raw_items: list[dict], incidents: list[dict], skipped: dict) -> t
             continue
         incident = build_incident(raw_inc, by_url, taken)
         if not incident:
+            continue
+        dup = find_duplicate(incident, incidents)
+        if dup:
+            merge_into(dup, incident)
+            for url in [u for u in raw_inc.get("source_urls", []) if u in by_url]:
+                rejected.pop(url, None)
+            print(f"merged into existing incident: {dup['id']}")
             continue
         taken.add(incident["id"])
         created.append(incident)
