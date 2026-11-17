@@ -241,7 +241,7 @@ def render_detail(inc: dict, data: dict) -> str:
 </main>
 {footer(data.get('generated_at', ''), root='../')}"""
 
-    return page(f"{inc['title']}｜{SITE_NAME}", inc.get("lead", SITE_DESC), body)
+    return page(f"{inc['title']}｜{SITE_NAME}", inc.get("lead", SITE_DESC), body, root="../")
 
 
 def main() -> int:
