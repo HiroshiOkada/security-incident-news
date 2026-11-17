@@ -415,7 +415,8 @@ def main() -> int:
 
     touched = follow_up(raw_items, incidents)
 
-    incidents.sort(key=lambda i: (i["event_date"], i["created_at"]), reverse=True)
+    weight = {"critical": 3, "high": 2, "medium": 1}
+    incidents.sort(key=lambda i: (i["event_date"], weight.get(i.get("severity"), 0), i["created_at"]), reverse=True)
     DATA.mkdir(parents=True, exist_ok=True)
     INCIDENTS.write_text(
         json.dumps(

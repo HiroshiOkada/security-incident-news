@@ -2,50 +2,6 @@
  "generated_at": "2026-11-17T19:41:30+09:00",
  "incidents": [
   {
-   "id": "2026-11-17-jins-data-breach",
-   "event_date": "2026-11-17",
-   "category": "breach",
-   "region": "jp",
-   "severity": "high",
-   "title": "ジンズで情報漏えい、最大1829万件に影響か",
-   "lead": "メガネチェーン大手のジンズで情報漏えいが発生し、最大1829万件の情報が影響を受けた可能性があると報じられた。漏えいした情報の種類や原因、侵入経路は現時点で明らかにされておらず、詳細は不明だ。会員数が千万人規模の小売企業での漏えいとなり、対象顧客への通知と被害範囲の特定が焦点となる。",
-   "cause": "原因や侵入経路は公表されていない。現時点で判明しているのは情報漏えいが発生したという事実と、最大1829万件という規模のみで、外部からの不正アクセスによるものか、内部不正や設定不備によるものかは不明である。",
-   "impact": "最大1829万件の情報が漏えいした可能性がある。漏えいした項目（氏名・住所・メールアドレス・決済情報など）の内訳、二次被害の有無、事業への影響は明らかにされていない。",
-   "ai_angle": "AIの関与は確認されていない。示唆として、会員データをレコメンドや問い合わせ対応などのAI機能で広く参照している企業では、漏えい時に「どのAIシステムがどの顧客データを保持しているか」を即座に棚卸しできる体制が、被害範囲の特定速度を左右する。",
-   "tags": [
-    "情報漏えい",
-    "個人情報",
-    "小売"
-   ],
-   "keywords": [
-    "ジンズ",
-    "JINS",
-    "情報漏えい",
-    "1829万件",
-    "個人情報保護委員会"
-   ],
-   "status": "ongoing",
-   "sources": [
-    {
-     "title": "【速報】ジンズで情報漏えい、最大1829万件",
-     "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBMbjdPb3B2WU9wSFBsVmFEOVdyVTJlNmQta3NjSWdMcHFGbHFDY29kczRtckJrSl9URW5RSnluLTRIdUdneUxEVHR6RQ?oc=5",
-     "publisher": "47NEWS",
-     "published": "2026-11-17"
-    }
-   ],
-   "timeline": [
-    {
-     "date": "2026-11-17",
-     "note": "ジンズホールディングスは11月17日、子会社の委託先に対する不正アクセスによる個人情報漏えいに関するお詫びとお知らせを適時開示した。原因は委託先への不正アクセスと判明したが、被害件数の確定には至っていない。",
-     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE93ZElfWjNfYWtTNlozR182N20xdG1qZDJ5S204bWpheXdnVkNaVlEtRGhFU1ZocmtKZF81SlFpVWFzTU9CRHFRdFpteFdIR1k2MnRQbkN2eWJPVTdSZ0wtWVVVeFBWakFSTkE?oc=5",
-     "publisher": "日本経済新聞",
-     "title": "ジンズホールディングス[3046]：当社子会社の委託先に対する不正アクセスによる個人情報漏えいに関するお詫びとお知らせ 2026年11月17日(適時開示) ：日経会社情報DIGITAL"
-    }
-   ],
-   "created_at": "2026-11-17T19:40:52+09:00",
-   "updated_at": "2026-11-17T19:41:06+09:00"
-  },
-  {
    "id": "2026-11-17-rakuten-securities-breach",
    "event_date": "2026-11-17",
    "category": "breach",
@@ -115,6 +71,50 @@
    ],
    "created_at": "2026-11-17T19:38:38+09:00",
    "updated_at": "2026-11-17T19:42:17+09:00"
+  },
+  {
+   "id": "2026-11-17-jins-data-breach",
+   "event_date": "2026-11-17",
+   "category": "breach",
+   "region": "jp",
+   "severity": "high",
+   "title": "ジンズで情報漏えい、最大1829万件に影響か",
+   "lead": "メガネチェーン大手のジンズで情報漏えいが発生し、最大1829万件の情報が影響を受けた可能性があると報じられた。漏えいした情報の種類や原因、侵入経路は現時点で明らかにされておらず、詳細は不明だ。会員数が千万人規模の小売企業での漏えいとなり、対象顧客への通知と被害範囲の特定が焦点となる。",
+   "cause": "原因や侵入経路は公表されていない。現時点で判明しているのは情報漏えいが発生したという事実と、最大1829万件という規模のみで、外部からの不正アクセスによるものか、内部不正や設定不備によるものかは不明である。",
+   "impact": "最大1829万件の情報が漏えいした可能性がある。漏えいした項目（氏名・住所・メールアドレス・決済情報など）の内訳、二次被害の有無、事業への影響は明らかにされていない。",
+   "ai_angle": "AIの関与は確認されていない。示唆として、会員データをレコメンドや問い合わせ対応などのAI機能で広く参照している企業では、漏えい時に「どのAIシステムがどの顧客データを保持しているか」を即座に棚卸しできる体制が、被害範囲の特定速度を左右する。",
+   "tags": [
+    "情報漏えい",
+    "個人情報",
+    "小売"
+   ],
+   "keywords": [
+    "ジンズ",
+    "JINS",
+    "情報漏えい",
+    "1829万件",
+    "個人情報保護委員会"
+   ],
+   "status": "ongoing",
+   "sources": [
+    {
+     "title": "【速報】ジンズで情報漏えい、最大1829万件",
+     "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBMbjdPb3B2WU9wSFBsVmFEOVdyVTJlNmQta3NjSWdMcHFGbHFDY29kczRtckJrSl9URW5RSnluLTRIdUdneUxEVHR6RQ?oc=5",
+     "publisher": "47NEWS",
+     "published": "2026-11-17"
+    }
+   ],
+   "timeline": [
+    {
+     "date": "2026-11-17",
+     "note": "ジンズホールディングスは11月17日、子会社の委託先に対する不正アクセスによる個人情報漏えいに関するお詫びとお知らせを適時開示した。原因は委託先への不正アクセスと判明したが、被害件数の確定には至っていない。",
+     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE93ZElfWjNfYWtTNlozR182N20xdG1qZDJ5S204bWpheXdnVkNaVlEtRGhFU1ZocmtKZF81SlFpVWFzTU9CRHFRdFpteFdIR1k2MnRQbkN2eWJPVTdSZ0wtWVVVeFBWakFSTkE?oc=5",
+     "publisher": "日本経済新聞",
+     "title": "ジンズホールディングス[3046]：当社子会社の委託先に対する不正アクセスによる個人情報漏えいに関するお詫びとお知らせ 2026年11月17日(適時開示) ：日経会社情報DIGITAL"
+    }
+   ],
+   "created_at": "2026-11-17T19:40:52+09:00",
+   "updated_at": "2026-11-17T19:41:06+09:00"
   },
   {
    "id": "2026-11-17-fugaku-unauthorized-access",
