@@ -15,6 +15,7 @@ OUT = ROOT
 DETAIL_DIR = OUT / "incidents"
 
 CATEGORY_LABEL = {"breach": "情報漏えい・侵害", "vulnerability": "重大な脆弱性"}
+CATEGORY_SHORT = {"breach": "漏えい", "vulnerability": "脆弱性"}
 CATEGORY_CLASS = {"breach": "c-breach", "vulnerability": "c-vuln"}
 REGION_LABEL = {"jp": "国内", "world": "海外"}
 SEVERITY_LABEL = {"critical": "重大", "high": "重要", "medium": "注目"}
@@ -127,7 +128,7 @@ def render_index(data: dict) -> str:
             f"""<li class="row">
   <a href="incidents/{esc(inc['id'])}.html">
     <span class="row-date">{jp_date(inc['event_date'])}</span>
-    <span class="row-badge {CATEGORY_CLASS.get(inc['category'], '')}">{CATEGORY_LABEL.get(inc['category'], '')}</span>
+    <span class="row-badge {CATEGORY_CLASS.get(inc['category'], '')}">{CATEGORY_SHORT.get(inc['category'], '')}</span>
     <span class="row-title">{esc(inc['title'])}</span>
     <span class="row-region">{REGION_LABEL.get(inc['region'], '')}</span>
     {f'<span class="row-updated">{tag}</span>' if tag else ''}
