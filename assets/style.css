@@ -244,7 +244,6 @@ main { padding: 22px 0 60px; min-height: 40vh; }
 @media (max-width: 560px) {
   .wrap { width: calc(100% - 28px); }
   .header-meta #updated { display: none; }
-  .field-label { display: none; }
   select, input[type="search"] { min-height: 42px; font-size: 14px; }
   .control-row { gap: 10px; }
   .chips { gap: 8px; }
