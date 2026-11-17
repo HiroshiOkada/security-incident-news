@@ -130,7 +130,7 @@ a { color: inherit; }
 
 .control-right { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .field { display: flex; align-items: center; gap: 8px; }
-.field-label { font-size: 11px; color: var(--text-faint); font-family: var(--mono); letter-spacing: .06em; }
+.field-label { font-size: 11px; color: var(--text-faint); font-family: var(--mono); letter-spacing: .06em; white-space: nowrap; }
 select, input[type="search"] {
   appearance: none; background: var(--panel); color: var(--text);
   border: 1px solid var(--line); border-radius: 8px;
@@ -147,7 +147,7 @@ select:focus, input[type="search"]:focus { border-color: var(--accent-dim); box-
   appearance: none; cursor: pointer;
   background: transparent; color: var(--text-dim);
   border: 1px solid var(--line); border-radius: 999px;
-  padding: 4px 11px; font: inherit; font-size: 12px;
+  padding: 5px 12px; font: inherit; font-size: 12px; line-height: 1.4;
   transition: all .15s;
 }
 .chip:hover { border-color: var(--accent-dim); color: var(--text); }
@@ -244,6 +244,10 @@ main { padding: 22px 0 60px; min-height: 40vh; }
 @media (max-width: 560px) {
   .wrap { width: calc(100% - 28px); }
   .header-meta #updated { display: none; }
+  .field-label { display: none; }
+  select, input[type="search"] { min-height: 42px; font-size: 14px; }
+  .control-row { gap: 10px; }
+  .chips { gap: 8px; }
   .item { grid-template-columns: 1fr; gap: 4px; padding: 14px 2px; }
   .item-time { display: flex; align-items: center; gap: 8px; }
   .item-time .region { margin-top: 0; }
