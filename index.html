@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Security Incident Watch — 国内・海外のセキュリティ事故ニュース</title>
+<meta name="description" content="日本と世界のセキュリティインシデント・脆弱性・情報漏えいニュースを、主要な情報源から自動収集して一覧化。1時間ごとに更新。">
+<meta property="og:title" content="Security Incident Watch">
+<meta property="og:description" content="国内・海外のセキュリティ事故ニュースを自動収集して一覧化">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%A1%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#feed">本文へ</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">◈</span>
+      <div>
+        <h1>Security Incident Watch</h1>
+        <p class="brand-sub">国内・海外のセキュリティ事故ニュース</p>
+      </div>
+    </div>
+    <div class="header-meta">
+      <span class="pulse" id="live-dot" aria-hidden="true"></span>
+      <span id="updated">読み込み中…</span>
+    </div>
+  </div>
+</header>
+
+<section class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat">
+      <span class="stat-label">総記事数</span>
+      <span class="stat-value" id="stat-total">—</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">国内</span>
+      <span class="stat-value" id="stat-jp">—</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">海外</span>
+      <span class="stat-value" id="stat-world">—</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">直近24時間</span>
+      <span class="stat-value" id="stat-24h">—</span>
+    </div>
+    <div class="stat stat-wide">
+      <span class="stat-label">取得ソース</span>
+      <span class="stat-value small" id="stat-sources">—</span>
+    </div>
+  </div>
+</section>
+
+<nav class="controls" aria-label="絞り込み">
+  <div class="wrap">
+    <div class="control-row">
+      <div class="segmented" role="tablist" aria-label="地域">
+        <button class="seg is-active" data-region="all" role="tab" aria-selected="true">すべて</button>
+        <button class="seg" data-region="jp" role="tab" aria-selected="false">国内</button>
+        <button class="seg" data-region="world" role="tab" aria-selected="false">海外</button>
+      </div>
+      <div class="control-right">
+        <label class="field">
+          <span class="field-label">期間</span>
+          <select id="period">
+            <option value="all">すべて</option>
+            <option value="1">24時間</option>
+            <option value="7">7日間</option>
+            <option value="30">30日間</option>
+          </select>
+        </label>
+        <label class="field search">
+          <span class="field-label">検索</span>
+          <input id="search" type="search" placeholder="キーワード（例: ランサムウェア, CVE）" autocomplete="off">
+        </label>
+      </div>
+    </div>
+    <div class="chips" id="tag-chips" aria-label="タグ"></div>
+  </div>
+</nav>
+
+<main class="wrap" id="feed">
+  <p class="result-line"><span id="result-count"></span><button id="reset" class="reset" hidden>条件をクリア</button></p>
+  <div id="list" class="list" aria-live="polite">
+    <div class="loading">ニュースを読み込んでいます…</div>
+  </div>
+  <p class="empty" id="empty" hidden>条件に一致する記事がありません。</p>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>このサイトについて</h2>
+        <p>国内外のセキュリティ関連メディア・公的機関が公開する RSS / Atom を GitHub Actions で1時間ごとに取得し、重複を除去して一覧化しています。記事本文は各情報源に帰属します。</p>
+        <p class="foot-links"><a href="https://github.com/HiroshiOkada/security-incident-news" target="_blank" rel="noopener">リポジトリ</a> ／ <a href="https://github.com/HiroshiOkada/security-incident-news/actions" target="_blank" rel="noopener">更新履歴</a> ／ <a href="data/news.json" target="_blank" rel="noopener">JSON データ</a></p>
+      </div>
+      <div>
+        <h2>情報源</h2>
+        <ul id="source-list" class="source-list"></ul>
+      </div>
+    </div>
+    <p class="copyright">自動収集のため、内容の正確性は各情報源をご確認ください。</p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

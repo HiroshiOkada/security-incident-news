@@ -1,0 +1,60 @@
+name: Update news & deploy Pages
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 * * * *" # 毎時 17 分 (UTC)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch news feeds
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: python3 scripts/fetch_news.py
+
+      - name: Commit updated data
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/news.json; then
+            echo "データに変更なし"
+            exit 0
+          fi
+          git add data/news.json
+          git commit -m "chore: update news data ($(date -u +%Y-%m-%dT%H:%MZ))"
+          git push
+
+      - name: Stage static site
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp -r assets data _site/
+          touch _site/.nojekyll
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
