@@ -1,62 +1,62 @@
 # Security Incident Watch
 
-日本と世界のセキュリティ事故（インシデント）・脆弱性・情報漏えいニュースを、主要メディア／公的機関の RSS・Atom から自動収集して一覧化する静的サイトです。GitHub Pages で公開し、GitHub Actions が 1 時間ごとにデータを更新します。
+国内外の**重大なセキュリティ事故**（大規模な情報漏えい・侵害、悪用中の重大脆弱性）だけを選んで記録するアーカイブサイトです。GitHub Pages で公開し、GitHub Actions が毎朝 7:30 (JST) に収集・選定・執筆・フォローアップを行います。
 
 公開 URL: https://hiroshiokada.github.io/security-incident-news/
+
+## 編集方針
+
+- **量より重要度**: 通常は 1 日 0〜1 件。大きな事件が無い日は何も追加しません。
+- **複数可**: 同日に複数の重大事件（例: 大規模漏えいが別々に発生、悪用中の重大脆弱性が判明）があれば最大 3 件まで記録します。
+- **詳細ページ**: 1 事件につき 1 ページ。原因・影響・AI との関係・出典リンクをまとめます。
+- **フォローアップ**: 掲載済みの事件に新しい関連報道が出れば「その後の展開」として追記し、収束したものは `resolved` にします。
 
 ## 仕組み
 
 ```
-RSS/Atom (14 sources)
-      │  scripts/fetch_news.py  (Python 標準ライブラリのみ)
-      ▼
-data/news.json   ← GitHub Actions が毎時生成・コミット
-      │
-      ▼
-index.html + assets/  ← 素の HTML/CSS/JS。ビルド不要
-      │
-      ▼
-GitHub Pages (Actions デプロイ)
+RSS / Google News (19 クエリ)
+   │  scripts/collect.py   … 候補プール data/raw.json（直近10日）
+   ▼
+scripts/curate.py           … OpenRouter の LLM が選定・執筆・続報生成
+   │                          → data/incidents.json（掲載記事）, data/skipped.json
+   ▼
+scripts/build.py            … index.html と incidents/<id>.html を生成
+   ▼
+GitHub Pages (Actions でデプロイ)
 ```
 
-- **収集**: `scripts/fetch_news.py` が各フィードを取得し、HTML タグ除去・日付正規化（JST）・URL/タイトルによる重複排除・タグ付け（ランサムウェア、情報漏えい、脆弱性など）を行う。
-- **保持**: 直近 120 日・最大 900 件。過去分は `data/news.json` に残るため、フィードから流れてしまった記事も保持される。
-- **表示**: `assets/app.js` が JSON を読み込み、地域（国内／海外）・期間・タグ・キーワードで絞り込んで日付ごとに表示。条件は URL クエリに反映されるので共有可能。
-
-## 情報源
-
-| 地域 | ソース |
-|---|---|
-| 国内 | Security NEXT / ScanNetSecurity / JPCERT/CC 注意喚起 / JVN 脆弱性情報 / ITmedia エンタープライズ（セキュリティ関連のみ） |
-| 海外 | The Hacker News / BleepingComputer / Krebs on Security / The Record / Dark Reading / SecurityWeek / CISA Advisories / JPCERT/CC (EN) / Unit 42 |
+- 選定は LLM（既定: `deepseek/deepseek-v4.1-flash-1017`、失敗時 `deepseek/deepseek-v4-flash`）。`CURATOR_MODELS` で変更可。
+- 選ばれなかった候補は 5 日間スキップ（その後、成長した事件として再評価されます）。
+- 生成 HTML もリポジトリにコミットするので、ローカルで開けばそのまま読めます。
 
 ## ローカルでの実行
 
 ```bash
-python3 scripts/fetch_news.py          # data/news.json を更新
-python3 -m http.server 8000            # http://localhost:8000 で確認
+python3 scripts/collect.py     # 候補収集
+OPENROUTER_API_KEY=... python3 scripts/curate.py   # 選定・執筆（鍵は環境変数 or /workspace/mail-pipeline/.env）
+python3 scripts/build.py       # HTML 生成
+python3 -m http.server 8000
 ```
 
-Python 3.9+ のみ必要（外部パッケージなし）。
+Python 3.9+ のみ（外部パッケージ不要）。
 
-## 情報源の追加・変更
+## 運用
 
-`scripts/fetch_news.py` の `FEEDS` に 1 行追加するだけです。
-
-```python
-{"name": "Example Security", "url": "https://example.com/feed", "region": "world", "lang": "en"},
-# ITmedia のように全ジャンルを配信するフィードは require_keywords で絞り込む
-```
-
-`region` は `jp` か `world`。取得に失敗したソースはサイト下部の「情報源」に NG として表示され、既存データは保持されます。
+- 定期実行: 毎日 22:30 UTC（07:30 JST）。手動実行は Actions の `Curate & deploy` → Run workflow。
+- 必要な Secret: `OPENROUTER_API_KEY`（リポジトリ Secrets に登録済み）。
+- 情報源の追加は `scripts/collect.py` の `FEEDS` / `GOOGLE_FEEDS`。
+- 選定基準の調整は `scripts/curate.py` の `SELECTION_SYSTEM` プロンプト。
 
 ## ファイル構成
 
 ```
-index.html                  サイト本体
-assets/style.css            スタイル
-assets/app.js               表示・絞り込みロジック
-data/news.json              収集結果（自動生成）
-scripts/fetch_news.py       収集スクリプト
-.github/workflows/pages.yml 毎時更新 + Pages デプロイ
+index.html                  一覧（自動生成）
+incidents/<id>.html         事件の詳細ページ（自動生成）
+assets/site.css             スタイル（ライト/ダーク自動切替）
+data/incidents.json         掲載記事データ
+data/skipped.json           選外にした候補（再評価用）
+scripts/collect.py          候補収集
+scripts/curate.py           AI 選定・執筆・フォローアップ
+scripts/build.py            HTML 生成
+.github/workflows/pages.yml 毎日の収集 + デプロイ
 ```

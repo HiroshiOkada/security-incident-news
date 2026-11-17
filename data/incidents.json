@@ -1,0 +1,261 @@
+{
+ "generated_at": "2026-11-17T19:38:49+09:00",
+ "incidents": [
+  {
+   "id": "2026-11-17-rakuten-securities-breach",
+   "event_date": "2026-11-17",
+   "category": "breach",
+   "region": "jp",
+   "severity": "critical",
+   "title": "楽天証券に不正アクセス、最大1125万口座のログインIDなど漏えいの恐れ",
+   "lead": "楽天証券のシステムへの不正アクセスにより、最大で約1125万口座分のログインIDや年収などの顧客情報が漏えいした可能性があることが分かった。日本経済新聞は最大447万口座分と報じており、影響規模の集計は報道によって幅がある。金融機関の顧客基盤を狙った大規模漏えいとして、口座の不正利用や標的型攻撃への二次利用が懸念される。",
+   "cause": "楽天証券に対する外部からの不正アクセス。侵入経路や手口の詳細、攻撃グループの特定については現時点で公表されておらず不明。漏えいしたとみられる情報にはログインIDのほか年収などが含まれると報じられている。",
+   "impact": "影響口座数は報道により最大約1125万口座（Impress Watch等）と最大447万口座（日本経済新聞）で幅があり、確定値は不明。証券口座のログイン情報が流出した場合、他のサービスとの使い回しによる不正ログインや、年収等を踏まえた標的型フィッシングへの悪用が想定される。",
+   "ai_angle": "AIの関与は確認されていない。漏えいしたIDと過去の漏えいパスワードを突き合わせる「クレデンシャルスタッフィング（認証情報の使い回し攻撃）」は自動化が進んでおり、AIによる大量試行を前提に多要素認証の徹底と不審ログイン検知の強化が実務上の焦点となる。",
+   "tags": [
+    "情報漏えい",
+    "不正アクセス",
+    "金融",
+    "証券"
+   ],
+   "keywords": [
+    "楽天証券",
+    "楽天",
+    "不正アクセス",
+    "情報漏えい",
+    "ログインID",
+    "クレデンシャルスタッフィング",
+    "Rakuten Securities"
+   ],
+   "status": "ongoing",
+   "sources": [
+    {
+     "title": "楽天証券に不正アクセス、年収など顧客情報漏洩 最大447万口座分",
+     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1aeERFYUlobzR5OXhoNERRM2V4WG5oWXJCVkRyaU43aXhUSnpzNzkzWDh6UDlBdERPcTM0cGpMYUV4c0VROEl0T3pZdGxiVTJDRDB1R1RzNGhlaXNxeS1ZeFdFRVVaRjAzNGpQZQ?oc=5",
+     "publisher": "日本経済新聞",
+     "published": "2026-11-17"
+    },
+    {
+     "title": "楽天証券に不正アクセス 最大1125万口座の情報漏えい可能性（Impress Watch）",
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE15Q3NyemczdUo4TTMwUzJrMy1MSE5RcVhKUF85OV9nV2lCSEVvZy14MzdQNDhrekxNcXlnQWlRVGN2ald5emRZWDloNlB1eE9SczFMY0JHYnZkb05IcVZ0T1JPZEgwZkM5SGtxWGh1dUNJejBRN1BMTlg3dDBkMlk?oc=5",
+     "publisher": "Yahoo!ニュース",
+     "published": "2026-11-17"
+    },
+    {
+     "title": "楽天証券に不正アクセス 最大1125万口座の情報漏えい可能性",
+     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9mUnpkNm4wMGtWbWR2Qm54QmFTb1ZUem1qSU44c215bTFCNTUybEZoR0F4empDODZraEZzNno5cmd4VE1vcWhpaUE2M25YS0RmUEN4RXhQUk9pdFVfRTdGZGxOZWQ?oc=5",
+     "publisher": "Impress Watch",
+     "published": "2026-11-17"
+    },
+    {
+     "title": "楽天証券に不正アクセス、最大1125万口座のログインIDなど漏えいのおそれ（CNET Japan）",
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5aak01ZVBxeEJWc0tkZ3gtR09ETlRnUUNRZnJhbXpkTEE4TFlvZkQ2WUpGOGowZjRjTFcxN1p5RjFpU3dUY19nbEJudW5GZ0dRYV9tcUFIcEtxLU9MNXg0WW5LdmZtaVJTdzgyZm5zTFk0X195eENCLXZrSTlkTEU?oc=5",
+     "publisher": "Yahoo!ニュース",
+     "published": "2026-11-17"
+    }
+   ],
+   "timeline": [],
+   "created_at": "2026-11-17T19:38:38+09:00",
+   "updated_at": "2026-11-17T19:38:38+09:00"
+  },
+  {
+   "id": "2026-11-17-fugaku-unauthorized-access",
+   "event_date": "2026-11-17",
+   "category": "breach",
+   "region": "jp",
+   "severity": "high",
+   "title": "スパコン「富岳」運用系に不正アクセス、運用停止 最大4597人の情報漏えい恐れ",
+   "lead": "理化学研究所が運用するスーパーコンピュータ「富岳」の運用系システムに不正アクセスがあり、運用が停止した。最大4597人分の個人情報が漏えいした恐れがあり、木原官房長官が適切な対応を求めるなど政府も反応している。国の基盤的な計算資源が標的となった事例として注目される。",
+   "cause": "「富岳」の運用系システムに対する外部からの不正アクセス。侵入経路や手口、攻撃者の特定については現時点で明らかになっていない。",
+   "impact": "最大4597人分の個人情報が漏えいした可能性があり、スーパーコンピュータの運用停止という形で研究・産業利用に影響が出ている。国の重要インフラに近い計算基盤への侵入として、他の研究機関への横展開の有無が焦点となる。",
+   "ai_angle": "AIの関与は確認されていない。研究用計算機は利用者アカウントが多数に分散し権限管理が複雑になりやすく、AIを用いた異常検知をログインやファイル転送の監視に組み込むことが実務上の課題となる。",
+   "tags": [
+    "不正アクセス",
+    "情報漏えい",
+    "研究機関",
+    "重要インフラ"
+   ],
+   "keywords": [
+    "理化学研究所",
+    "富岳",
+    "スパコン",
+    "不正アクセス",
+    "情報漏えい",
+    "RIKEN",
+    "Fugaku"
+   ],
+   "status": "ongoing",
+   "sources": [
+    {
+     "title": "理化学研究所のスパコン「富岳」運用系に不正アクセス 情報漏えいの恐れ - ITmedia PC USER",
+     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1jd0M5MkpjeldOZDdaXzhBeXpwejFZdTBuZURlOXItNTBXLVZGcUdJLUlIX29xaWk5aXZDUHdIM2ZpMktHdU04T0N0S0FOMC02eHpOTjdYdEkzb0l3blR5R0Mwc1JUaGd2eTRhV1ZpNNIBaEFVX3lxTE9rYXZQRjFWYUVxMklCQk5HVDcyY2FYSVVLRVdQaEd5NzFhWWhTQW1WeHh3YTNPSmZBVFV0MUNUaG9Oc3c5UXpVbGdVYmlJTmdobWJLd0tmelJ2WnNwamdIZEU3OXhvb3NQ?oc=5",
+     "publisher": "ITmedia",
+     "published": "2026-11-17"
+    },
+    {
+     "title": "スパコン「富岳」運用システムに不正アクセス 最大4597人の個人情報漏えい恐れ 「理研の適切な対応が重要」木原官房長官",
+     "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9MR19wRUpfbjZyYnJfa1lYdTJnQlVsV0JlNUwyMkxJRmJreU9iQ005aVNUYWpEYVF6UlJjcE9VWXhQNGFYb2R1STV1dWJZWnBrcGN3STJvQQ?oc=5",
+     "publisher": "TBS NEWS DIG",
+     "published": "2026-11-17"
+    },
+    {
+     "title": "スパコン「富岳」、不正アクセスで運用停止 最大4597人の個人情報漏えいの可能性",
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5Ra3lfQ0dkQ0RRU1R2MGo0YnhfcjhSc1BpNlBtNUd2ZjdzQV93OTNQYk5NSldycWh2RGdhdTVkVkVSOWRuT3NOSU1aQ1VoY0k3c21rSy1NZFRjcEg0VW5rRDNSSW9XWTc2d1RHQWxoN3hVX2FqRXRXTjVUZEhaclk?oc=5",
+     "publisher": "Yahoo!ニュース",
+     "published": "2026-11-17"
+    }
+   ],
+   "timeline": [],
+   "created_at": "2026-11-17T19:38:38+09:00",
+   "updated_at": "2026-11-17T19:38:38+09:00"
+  },
+  {
+   "id": "2026-11-16-optimizely-supply-chain-attack",
+   "event_date": "2026-11-16",
+   "category": "vulnerability",
+   "region": "world",
+   "severity": "critical",
+   "title": "Optimizelyの脆弱性を悪用したサプライチェーン攻撃、BBCやCNNなど主要サイトでマルウェア配信",
+   "lead": "Webサイト最適化プラットフォーム「Optimizely Web Experimentation」の脆弱性が悪用され、BBC、CNN、Zoom、GitLab、Salesforceなど世界178以上の組織のサイトを訪れたユーザーにマルウェアが配信された。攻撃者はOptimizelyのスクリプトを乗っ取り、カードスキマーやiOSエクスプロイトキットを埋め込んだとみられる。",
+   "cause": "Optimizely Web Experimentationの脆弱性（詳細は未公開）を悪用し、攻撃者が同サービスが配信するJavaScriptスクリプトを改ざん。顧客サイトが読み込むスクリプトに悪意のあるコードが混入され、カード情報の窃取や暗号通貨の流出、iOSデバイスへのエクスプロイトが試みられた。",
+   "impact": "BBC、CNN、Fox News、Zoom、GitLab、Salesforce、Equifax、HSBC、IKEAなど、少なくとも178の組織のサイト訪問者が影響を受けた。訪問者のブラウザ上で暗号通貨を盗むスクリプトやクレジットカード情報を抜き取るスキマー、iOSの脆弱性を突くエクスプロイトが実行された可能性がある。被害規模は数千万人規模に及ぶ可能性があり、サプライチェーン経由の広範な攻撃として極めて深刻。",
+   "ai_angle": "本攻撃にAIが直接使われたかは不明だが、AIによる自動脆弱性スキャンやペイロード生成が攻撃の高速化に寄与した可能性がある。また、AIエージェントがサプライチェーン攻撃の自動化に利用されるリスクが高まっており、AI時代のセキュリティ対策として、サードパーティスクリプトの監視とAIによる異常検知の重要性が改めて浮き彫りになった。",
+   "tags": [
+    "supply-chain-attack",
+    "malware",
+    "card-skimmer",
+    "javascript-hijacking"
+   ],
+   "keywords": [
+    "Optimizely",
+    "Optimizely Web Experimentation",
+    "supply chain attack",
+    "BBC",
+    "CNN",
+    "Zoom",
+    "GitLab",
+    "Salesforce"
+   ],
+   "status": "ongoing",
+   "sources": [
+    {
+     "title": "Optimizely Vulnerability Exploited to Serve Malware on Major Websites",
+     "url": "https://www.securityweek.com/optimizely-vulnerability-exploited-to-serve-malware-on-major-websites/",
+     "publisher": "SecurityWeek",
+     "published": "2026-11-17"
+    },
+    {
+     "title": "Hijacked Optimizely Scripts Served Card Skimmer and iOS Exploit Kits to CNN, BBC and Zoom Visitors",
+     "url": "https://thehackernews.com/2026/11/hijacked-optimizely-scripts-served-card.html",
+     "publisher": "The Hacker News",
+     "published": "2026-11-17"
+    },
+    {
+     "title": "Optimizely hack infected CNN, Fox News, BBC, Salesforce sites with malware",
+     "url": "https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/",
+     "publisher": "BleepingComputer",
+     "published": "2026-11-17"
+    }
+   ],
+   "timeline": [],
+   "created_at": "2026-11-17T19:35:21+09:00",
+   "updated_at": "2026-11-17T19:35:21+09:00"
+  },
+  {
+   "id": "2026-11-13-check-point-php2shell-tsga",
+   "event_date": "2026-11-13",
+   "category": "vulnerability",
+   "region": "world",
+   "severity": "critical",
+   "title": "Check PointゲートウェイのPHP2Shell脆弱性悪用、TSGAバックドアとESXi消去を確認",
+   "lead": "Check Pointのセキュリティゲートウェイにおける「PHP2Shell」脆弱性が実際の攻撃で悪用され、未修正の機器にバックドア「TSGA」が仕込まれ、ESXiのファイルが消去される被害が確認された。攻撃者はGaia OSの未公開のローカル権限昇格脆弱性も連鎖させており、米CISAは悪用済み脆弱性カタログ（KEV）に追加した。",
+   "cause": "未修正のCheck Point Security Gatewayに存在するPHP2Shell脆弱性を突いて初期アクセスを獲得し、Gaia OSの未報告のローカル権限昇格脆弱性を連鎖させてTSGAバックドアを展開した。さらにESXi上のファイルを消去する。攻撃グループは不明とされている。",
+   "impact": "侵害されたゲートウェイはネットワーク境界の防御装置で、バックドアにより持続的な侵入経路が確保される。ESXiのファイル消去は仮想化基盤の停止につながり、業務影響が大きい。被害組織の数や範囲は不明。",
+   "ai_angle": "AIの関与は確認されていない。境界防御装置と仮想化基盤を同時に狙う連鎖攻撃では、AIによる異常検知だけに頼らず、機器の資産管理とパッチ適用の自動化を優先すべきだ。",
+   "tags": [
+    "Check Point",
+    "PHP2Shell",
+    "TSGA",
+    "ESXi"
+   ],
+   "keywords": [
+    "Check Point",
+    "PHP2Shell",
+    "TSGA",
+    "Gaia OS",
+    "ESXi",
+    "CISA KEV",
+    "Check Point Security Gateway",
+    "CVE-2026-123039"
+   ],
+   "status": "ongoing",
+   "sources": [
+    {
+     "title": "Hackers Exploit PHP2Shell Flaws in Check Point Gateways to Deploy TSGA Backdoor and Wipe ESXi Files",
+     "url": "https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html",
+     "publisher": "The Hacker News",
+     "published": "2026-11-13"
+    },
+    {
+     "title": "Check Point製品に脆弱性 - 「PHP2Shell」連鎖での悪用も",
+     "url": "https://www.security-next.com/192877",
+     "publisher": "Security NEXT",
+     "published": "2026-11-16"
+    },
+    {
+     "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+     "url": "https://www.cisa.gov/news-events/alerts/2026/11/13/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+     "publisher": "CISA Advisories",
+     "published": "2026-11-13"
+    }
+   ],
+   "timeline": [],
+   "created_at": "2026-11-17T19:35:54+09:00",
+   "updated_at": "2026-11-17T19:35:54+09:00"
+  },
+  {
+   "id": "2026-11-11-apache-http2-cve-2026-119618",
+   "event_date": "2026-11-11",
+   "category": "vulnerability",
+   "region": "world",
+   "severity": "critical",
+   "title": "Apache HTTP Serverに認証不要のリモートコード実行脆弱性 CVE-2026-119618、2.4.71で修正",
+   "lead": "Apache HTTP ServerのHTTP/2モジュール「mod_http2」に、リモートから認証なしで任意のコードを実行できる可能性がある重大な脆弱性（CVE-2026-119618）が見つかった。影響を受けるのはバージョン2.4.55から2.4.70までで、修正版の2.4.71が2026年11月11日に公開されている。HTTP/2を有効にしているサーバーが対象で、早急な更新が求められる。",
+   "cause": "HTTP/2を処理するApacheのモジュール「mod_http2」の実装に起因する脆弱性。要約では技術的な詳細やCVSSスコアは明らかにされていないが、リモートの攻撃者が認証を経ずにサーバー上でコードを実行できるとされる。影響するのは2.4.55〜2.4.70で、HTTP/2を有効にしたサーバーのみが対象となり、2.4.71で修正された。",
+   "impact": "Apache HTTP Serverは世界で最も広く使われているWebサーバーの一つで、HTTP/2を有効にしている企業・公共系サイトが対象となる。認証不要で遠隔からコードを実行できるとなれば、Webサイトの改ざんや情報窃取、サーバーを踏み台にした内部侵入につながるおそれがある。悪用の報告や実際の被害規模は明らかになっていない。",
+   "ai_angle": "AIの関与は確認されていない。実務面では、生成AIを使って設定ファイルやインフラ構成を自動生成する現場では、HTTP/2の有効化状態が把握されないまま放置されやすいため、構成管理ツールで有効化状況を機械的に棚卸しし、修正版への追従をCI/CDの依存関係チェックに組み込むことが有効となる。",
+   "tags": [
+    "Apache",
+    "HTTP/2",
+    "脆弱性",
+    "リモートコード実行"
+   ],
+   "keywords": [
+    "Apache HTTP Server",
+    "mod_http2",
+    "CVE-2026-119618",
+    "2.4.71",
+    "リモートコード実行",
+    "JVNVU90805396"
+   ],
+   "status": "ongoing",
+   "sources": [
+    {
+     "title": "Critical Apache HTTP/2 Flaw Could Let Unauthenticated Attackers Execute Code Remotely",
+     "url": "https://thehackernews.com/2026/11/critical-apache-http2-flaw-could-let.html",
+     "publisher": "The Hacker News",
+     "published": "2026-11-12"
+    },
+    {
+     "title": "Apache HTTP Server 2.4における複数の脆弱性に対するアップデート（2026年11月11日）",
+     "url": "https://jvn.jp/vu/JVNVU90805396/",
+     "publisher": "JVN 脆弱性情報",
+     "published": "2026-11-12"
+    }
+   ],
+   "timeline": [],
+   "created_at": "2026-11-17T19:36:10+09:00",
+   "updated_at": "2026-11-17T19:36:10+09:00"
+  }
+ ]
+}

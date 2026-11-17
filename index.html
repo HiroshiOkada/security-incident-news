@@ -3,111 +3,95 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Security Incident Watch — 国内・海外のセキュリティ事故ニュース</title>
-<meta name="description" content="日本と世界のセキュリティインシデント・脆弱性・情報漏えいニュースを、主要な情報源から自動収集して一覧化。1時間ごとに更新。">
-<meta property="og:title" content="Security Incident Watch">
-<meta property="og:description" content="国内・海外のセキュリティ事故ニュースを自動収集して一覧化">
+<title>Security Incident Watch｜重大セキュリティ事故の記録</title>
+<meta name="description" content="国内外の大規模な情報漏えいと重大な脆弱性だけを、1日1件選んで記録するセキュリティ事故アーカイブ。">
+<meta property="og:title" content="Security Incident Watch｜重大セキュリティ事故の記録">
+<meta property="og:description" content="国内外の大規模な情報漏えいと重大な脆弱性だけを、1日1件選んで記録するセキュリティ事故アーカイブ。">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%A1%EF%B8%8F%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<a class="skip" href="#feed">本文へ</a>
-
-<header class="site-header">
-  <div class="wrap header-inner">
-    <div class="brand">
-      <span class="brand-mark" aria-hidden="true">◈</span>
-      <div>
-        <h1>Security Incident Watch</h1>
-        <p class="brand-sub">国内・海外のセキュリティ事故ニュース</p>
-      </div>
+<header class="masthead">
+  <div class="wrap">
+    <div class="masthead-top">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">◈</span>
+        <span class="brand-name">Security Incident Watch</span>
+      </a>
     </div>
-    <div class="header-meta">
-      <span class="pulse" id="live-dot" aria-hidden="true"></span>
-      <span id="updated">読み込み中…</span>
-    </div>
+    <h1><a href="index.html">重大セキュリティ事故の記録</a></h1>
+    <p class="tagline">国内外の大規模な情報漏えいと重大な脆弱性を、<br class="br-sp">一日一件だけ選んで記録します。</p>
   </div>
 </header>
-
-<section class="stats">
-  <div class="wrap stats-grid">
-    <div class="stat">
-      <span class="stat-label">総記事数</span>
-      <span class="stat-value" id="stat-total">—</span>
-    </div>
-    <div class="stat">
-      <span class="stat-label">国内</span>
-      <span class="stat-value" id="stat-jp">—</span>
-    </div>
-    <div class="stat">
-      <span class="stat-label">海外</span>
-      <span class="stat-value" id="stat-world">—</span>
-    </div>
-    <div class="stat">
-      <span class="stat-label">直近24時間</span>
-      <span class="stat-value" id="stat-24h">—</span>
-    </div>
-    <div class="stat stat-wide">
-      <span class="stat-label">取得ソース</span>
-      <span class="stat-value small" id="stat-sources">—</span>
-    </div>
+<main class="wrap">
+  <div class="meta-bar">
+    <span>収録 5 件</span>
+    <span>今月 5 件</span>
+    <span>最終更新 2026-11-17 19:38 JST</span>
   </div>
+  <article class="hero">
+  <div class="hero-meta">
+    <span class="badge s-critical">重大</span>
+    <span class="badge c-breach">情報漏えい・侵害</span>
+    <span class="meta-text">2026年11月17日 ・ 国内</span>
+  </div>
+  <h2 class="hero-title"><a href="incidents/2026-11-17-rakuten-securities-breach.html">楽天証券に不正アクセス、最大1125万口座のログインIDなど漏えいの恐れ</a></h2>
+  <p class="hero-lead">楽天証券のシステムへの不正アクセスにより、最大で約1125万口座分のログインIDや年収などの顧客情報が漏えいした可能性があることが分かった。日本経済新聞は最大447万口座分と報じており、影響規模の集計は報道によって幅がある。金融機関の顧客基盤を狙った大規模漏えいとして、口座の不正利用や標的型攻撃への二次利用が懸念される。</p>
+  <a class="read-more" href="incidents/2026-11-17-rakuten-securities-breach.html">全文を読む<span aria-hidden="true"> →</span></a>
+</article>
+  <section class="archive">
+  <div class="section-head">
+    <h2>過去の事件</h2>
+    <span class="section-count">4 件</span>
+  </div>
+  <ol class="rows"><li class="row">
+  <a href="incidents/2026-11-17-fugaku-unauthorized-access.html">
+    <span class="row-date">2026年11月17日</span>
+    <span class="row-badge c-breach">情報漏えい・侵害</span>
+    <span class="row-title">スパコン「富岳」運用系に不正アクセス、運用停止 最大4597人の情報漏えい恐れ</span>
+    <span class="row-region">国内</span>
+    
+  </a>
+</li><li class="row">
+  <a href="incidents/2026-11-16-optimizely-supply-chain-attack.html">
+    <span class="row-date">2026年11月16日</span>
+    <span class="row-badge c-vuln">重大な脆弱性</span>
+    <span class="row-title">Optimizelyの脆弱性を悪用したサプライチェーン攻撃、BBCやCNNなど主要サイトでマルウェア配信</span>
+    <span class="row-region">海外</span>
+    
+  </a>
+</li><li class="row">
+  <a href="incidents/2026-11-13-check-point-php2shell-tsga.html">
+    <span class="row-date">2026年11月13日</span>
+    <span class="row-badge c-vuln">重大な脆弱性</span>
+    <span class="row-title">Check PointゲートウェイのPHP2Shell脆弱性悪用、TSGAバックドアとESXi消去を確認</span>
+    <span class="row-region">海外</span>
+    
+  </a>
+</li><li class="row">
+  <a href="incidents/2026-11-11-apache-http2-cve-2026-119618.html">
+    <span class="row-date">2026年11月11日</span>
+    <span class="row-badge c-vuln">重大な脆弱性</span>
+    <span class="row-title">Apache HTTP Serverに認証不要のリモートコード実行脆弱性 CVE-2026-119618、2.4.71で修正</span>
+    <span class="row-region">海外</span>
+    
+  </a>
+</li></ol>
 </section>
-
-<nav class="controls" aria-label="絞り込み">
-  <div class="wrap">
-    <div class="control-row">
-      <div class="segmented" role="tablist" aria-label="地域">
-        <button class="seg is-active" data-region="all" role="tab" aria-selected="true">すべて</button>
-        <button class="seg" data-region="jp" role="tab" aria-selected="false">国内</button>
-        <button class="seg" data-region="world" role="tab" aria-selected="false">海外</button>
-      </div>
-      <div class="control-right">
-        <label class="field">
-          <span class="field-label">期間</span>
-          <select id="period">
-            <option value="all">すべて</option>
-            <option value="1">24時間</option>
-            <option value="7">7日間</option>
-            <option value="30">30日間</option>
-          </select>
-        </label>
-        <label class="field search">
-          <span class="field-label">検索</span>
-          <input id="search" type="search" placeholder="キーワード（例: ランサムウェア, CVE）" autocomplete="off">
-        </label>
-      </div>
-    </div>
-    <div class="chips" id="tag-chips" aria-label="タグ"></div>
-  </div>
-</nav>
-
-<main class="wrap" id="feed">
-  <p class="result-line"><span id="result-count"></span><button id="reset" class="reset" hidden>条件をクリア</button></p>
-  <div id="list" class="list" aria-live="polite">
-    <div class="loading">ニュースを読み込んでいます…</div>
-  </div>
-  <p class="empty" id="empty" hidden>条件に一致する記事がありません。</p>
 </main>
-
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <h2>このサイトについて</h2>
-        <p>国内外のセキュリティ関連メディア・公的機関が公開する RSS / Atom を GitHub Actions で1時間ごとに取得し、重複を除去して一覧化しています。記事本文は各情報源に帰属します。</p>
-        <p class="foot-links"><a href="https://github.com/HiroshiOkada/security-incident-news" target="_blank" rel="noopener">リポジトリ</a> ／ <a href="https://github.com/HiroshiOkada/security-incident-news/actions" target="_blank" rel="noopener">更新履歴</a> ／ <a href="data/news.json" target="_blank" rel="noopener">JSON データ</a></p>
-      </div>
-      <div>
-        <h2>情報源</h2>
-        <ul id="source-list" class="source-list"></ul>
-      </div>
+  <div class="wrap footer-inner">
+    <div class="footer-col">
+      <p class="footer-title">このサイトについて</p>
+      <p>国内外の報道から、社会的影響の大きいセキュリティ事故と重大な脆弱性だけを選び、原因・影響・AIとの関係を整理して記録しています。記事本文は AI による要約・編集を含みます。正確な情報は各出典をご確認ください。</p>
     </div>
-    <p class="copyright">自動収集のため、内容の正確性は各情報源をご確認ください。</p>
+    <div class="footer-col">
+      <p class="footer-title">アーカイブ</p>
+      <p><a href="index.html">記事一覧</a> ／ <a href="https://github.com/HiroshiOkada/security-incident-news" target="_blank" rel="noopener">GitHub</a></p>
+      <p class="footer-meta">最終生成 2026-11-17 19:38 JST</p>
+    </div>
   </div>
 </footer>
-
-<script src="assets/app.js"></script>
 </body>
 </html>

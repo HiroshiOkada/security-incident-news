@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Optimizelyの脆弱性を悪用したサプライチェーン攻撃、BBCやCNNなど主要サイトでマルウェア配信｜Security Incident Watch</title>
+<meta name="description" content="Webサイト最適化プラットフォーム「Optimizely Web Experimentation」の脆弱性が悪用され、BBC、CNN、Zoom、GitLab、Salesforceなど世界178以上の組織のサイトを訪れたユーザーにマルウェアが配信された。攻撃者はOptimizelyのスクリプトを乗っ取り、カードスキマーやiOSエクスプロイトキットを埋め込んだとみられる。">
+<meta property="og:title" content="Optimizelyの脆弱性を悪用したサプライチェーン攻撃、BBCやCNNなど主要サイトでマルウェア配信｜Security Incident Watch">
+<meta property="og:description" content="Webサイト最適化プラットフォーム「Optimizely Web Experimentation」の脆弱性が悪用され、BBC、CNN、Zoom、GitLab、Salesforceなど世界178以上の組織のサイトを訪れたユーザーにマルウェアが配信された。攻撃者はOptimizelyのスクリプトを乗っ取り、カードスキマーやiOSエクスプロイトキットを埋め込んだとみられる。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%A1%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <div class="masthead-top">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark" aria-hidden="true">◈</span>
+        <span class="brand-name">Security Incident Watch</span>
+      </a>
+    </div>
+    <h1><a href="../index.html">重大セキュリティ事故の記録</a></h1>
+    <p class="tagline">国内外の大規模な情報漏えいと重大な脆弱性を、<br class="br-sp">一日一件だけ選んで記録します。</p>
+  </div>
+</header>
+<main class="wrap article">
+  <p class="breadcrumb"><a href="../index.html">記事一覧</a><span aria-hidden="true"> / </span>重大な脆弱性</p>
+  <header class="article-head">
+    <div class="hero-meta">
+      <span class="badge s-critical">重大</span>
+      <span class="badge c-vuln">重大な脆弱性</span>
+      <span class="meta-text">2026年11月16日 ・ 海外</span>
+    </div>
+    <h1>Optimizelyの脆弱性を悪用したサプライチェーン攻撃、BBCやCNNなど主要サイトでマルウェア配信</h1>
+    <p class="lead">Webサイト最適化プラットフォーム「Optimizely Web Experimentation」の脆弱性が悪用され、BBC、CNN、Zoom、GitLab、Salesforceなど世界178以上の組織のサイトを訪れたユーザーにマルウェアが配信された。攻撃者はOptimizelyのスクリプトを乗っ取り、カードスキマーやiOSエクスプロイトキットを埋め込んだとみられる。</p>
+    
+  </header>
+  <section class="article-section">
+  <h2>原因・侵入経路</h2>
+  <p>Optimizely Web Experimentationの脆弱性（詳細は未公開）を悪用し、攻撃者が同サービスが配信するJavaScriptスクリプトを改ざん。顧客サイトが読み込むスクリプトに悪意のあるコードが混入され、カード情報の窃取や暗号通貨の流出、iOSデバイスへのエクスプロイトが試みられた。</p>
+</section><section class="article-section">
+  <h2>影響・被害規模</h2>
+  <p>BBC、CNN、Fox News、Zoom、GitLab、Salesforce、Equifax、HSBC、IKEAなど、少なくとも178の組織のサイト訪問者が影響を受けた。訪問者のブラウザ上で暗号通貨を盗むスクリプトやクレジットカード情報を抜き取るスキマー、iOSの脆弱性を突くエクスプロイトが実行された可能性がある。被害規模は数千万人規模に及ぶ可能性があり、サプライチェーン経由の広範な攻撃として極めて深刻。</p>
+</section><section class="article-section">
+  <h2>AI との関係</h2>
+  <p>本攻撃にAIが直接使われたかは不明だが、AIによる自動脆弱性スキャンやペイロード生成が攻撃の高速化に寄与した可能性がある。また、AIエージェントがサプライチェーン攻撃の自動化に利用されるリスクが高まっており、AI時代のセキュリティ対策として、サードパーティスクリプトの監視とAIによる異常検知の重要性が改めて浮き彫りになった。</p>
+</section>
+  
+  <section class="sources">
+    <h2>出典</h2>
+    <ul><li>
+  <a href="https://www.securityweek.com/optimizely-vulnerability-exploited-to-serve-malware-on-major-websites/" target="_blank" rel="noopener">Optimizely Vulnerability Exploited to Serve Malware on Major Websites</a>
+  <span class="src-meta">SecurityWeek ・ 2026年11月17日</span>
+</li><li>
+  <a href="https://thehackernews.com/2026/11/hijacked-optimizely-scripts-served-card.html" target="_blank" rel="noopener">Hijacked Optimizely Scripts Served Card Skimmer and iOS Exploit Kits to CNN, BBC and Zoom Visitors</a>
+  <span class="src-meta">The Hacker News ・ 2026年11月17日</span>
+</li><li>
+  <a href="https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/" target="_blank" rel="noopener">Optimizely hack infected CNN, Fox News, BBC, Salesforce sites with malware</a>
+  <span class="src-meta">BleepingComputer ・ 2026年11月17日</span>
+</li></ul>
+  </section>
+  <nav class="article-nav"><a class="nav-link" href="2026-11-17-fugaku-unauthorized-access.html"><span>新しい記事</span>スパコン「富岳」運用系に不正アクセス、運用停止 最大4597人の情報漏えい恐れ</a><a class="nav-link" href="2026-11-13-check-point-php2shell-tsga.html"><span>古い記事</span>Check PointゲートウェイのPHP2Shell脆弱性悪用、TSGAバックドアとESXi消去を確認</a></nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-col">
+      <p class="footer-title">このサイトについて</p>
+      <p>国内外の報道から、社会的影響の大きいセキュリティ事故と重大な脆弱性だけを選び、原因・影響・AIとの関係を整理して記録しています。記事本文は AI による要約・編集を含みます。正確な情報は各出典をご確認ください。</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">アーカイブ</p>
+      <p><a href="../index.html">記事一覧</a> ／ <a href="https://github.com/HiroshiOkada/security-incident-news" target="_blank" rel="noopener">GitHub</a></p>
+      <p class="footer-meta">最終生成 2026-11-17 19:38 JST</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
