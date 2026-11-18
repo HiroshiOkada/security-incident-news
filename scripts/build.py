@@ -6,8 +6,12 @@ from __future__ import annotations
 import html
 import json
 import shutil
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
+
+JST = timezone(timedelta(hours=9))
+BUILT_AT = datetime.now(JST)
+BUILT_STR = BUILT_AT.strftime("%Y-%m-%d %H:%M")
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "incidents.json"
@@ -91,7 +95,7 @@ def footer(generated_at: str, root: str = "") -> str:
     <div class="footer-col">
       <p class="footer-title">アーカイブ</p>
       <p><a href="{root}index.html">記事一覧</a> ／ <a href="https://github.com/HiroshiOkada/security-incident-news" target="_blank" rel="noopener">GitHub</a></p>
-      <p class="footer-meta">最終生成 {esc(generated_at.replace("T", " ")[:16])} JST</p>
+      <p class="footer-meta">最終生成 {BUILT_STR} JST ／ 最終選定 {esc(generated_at.replace("T", " ")[:16])} JST</p>
     </div>
   </div>
 </footer>"""
@@ -102,7 +106,9 @@ def render_index(data: dict) -> str:
     latest = incidents[0] if incidents else None
     rest = incidents[1:]
     total = len(incidents)
-    this_month = sum(1 for i in incidents if i["event_date"][:7] == datetime.now().strftime("%Y-%m")) if incidents else 0
+    this_month = sum(1 for i in incidents if i["event_date"][:7] == BUILT_AT.strftime("%Y-%m")) if incidents else 0
+    today = BUILT_AT.strftime("%Y-%m-%d")
+    today_count = sum(1 for i in incidents if i.get("created_at", "")[:10] == today)
 
     if latest:
         hero = f"""<article class="hero">
@@ -148,13 +154,20 @@ def render_index(data: dict) -> str:
         else ""
     )
 
+    today_note = (
+        """<p class="today-note">本日は基準に該当する新規の事件がありませんでした（毎朝 7:30 に自動で確認しています）。</p>"""
+        if today_count == 0
+        else ""
+    )
     body = f"""{masthead()}
 <main class="wrap">
   <div class="meta-bar">
     <span>収録 {total} 件</span>
     <span>今月 {this_month} 件</span>
-    <span>最終更新 {esc(data.get('generated_at', '')[:16].replace('T', ' '))} JST</span>
+    <span>本日 {today_count} 件</span>
+    <span>最終更新 {BUILT_STR} JST</span>
   </div>
+  {today_note}
   {hero}
   {archive}
 </main>
@@ -259,7 +272,7 @@ def main() -> int:
 
     (OUT / "index.html").write_text(render_index(data), encoding="utf-8")
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
-    print(f"built index.html + {len(data.get('incidents', []))} detail pages")
+    print(f"built index.html + {len(data.get('incidents', []))} detail pages at {BUILT_STR} JST")
     return 0
 
 
