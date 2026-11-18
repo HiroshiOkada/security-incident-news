@@ -109,6 +109,11 @@ def render_index(data: dict) -> str:
     this_month = sum(1 for i in incidents if i["event_date"][:7] == BUILT_AT.strftime("%Y-%m")) if incidents else 0
     today = BUILT_AT.strftime("%Y-%m-%d")
     today_count = sum(1 for i in incidents if i.get("created_at", "")[:10] == today)
+    updated_today = sum(
+        1
+        for i in incidents
+        if i.get("updated_at", "")[:10] == today and i.get("created_at", "")[:10] != today
+    )
 
     if latest:
         hero = f"""<article class="hero">
@@ -154,11 +159,14 @@ def render_index(data: dict) -> str:
         else ""
     )
 
-    today_note = (
-        """<p class="today-note">本日は基準に該当する新規の事件がありませんでした（毎朝 7:30 に自動で確認しています）。</p>"""
-        if today_count == 0
-        else ""
-    )
+    if today_count == 0:
+        today_note = (
+            f"""<p class="today-note">本日は新規の事件はありませんでした。既存の事件に続報を {updated_today} 件追記しています。</p>"""
+            if updated_today
+            else """<p class="today-note">本日は基準に該当する新規の事件がありませんでした（毎朝 7:30 に自動で確認しています）。</p>"""
+        )
+    else:
+        today_note = ""
     body = f"""{masthead()}
 <main class="wrap">
   <div class="meta-bar">
