@@ -1,6 +1,56 @@
 {
- "generated_at": "2026-11-19T00:16:28+09:00",
+ "generated_at": "2026-11-19T07:37:57+09:00",
  "incidents": [
+  {
+   "id": "2026-11-19-nginx-cve-2026-123007",
+   "event_date": "2026-11-19",
+   "category": "vulnerability",
+   "region": "world",
+   "severity": "critical",
+   "title": "NGINXに10年前から存在する認証不要のリモートコード実行脆弱性「nginx2root」、悪用が確認される",
+   "lead": "広く使われているWebサーバーソフト「NGINX」に、認証なしでリモートからコードを実行できる深刻な脆弱性が確認された。CVE-2026-123007（通称nginx2root）はHTTP/2の実装に起因し、CVSSスコアは9.8と最高度に分類される。",
+   "cause": "NGINXのHTTP/2サポートにおける整数アンダーフローの脆弱性。攻撃者は特別に細工したHTTP/2リクエストを送信するだけで、認証なしに任意のコードをサーバー上で実行できる。この脆弱性はNGINX 1.9.5（2015年9月リリース）以降の全バージョンに存在し、10年以上放置されていた。",
+   "impact": "NGINXは世界のWebサーバーの約3割で利用されており、影響範囲は極めて広い。攻撃に成功した場合、サーバーの完全な乗っ取り、データの窃取・改ざん、マルウェアの配信などが可能となる。すでに悪用が確認されており、速やかなパッチ適用が求められる。",
+   "ai_angle": "AIの関与は確認されていないが、本脆弱性の悪用がAIによる自動スキャン・攻撃の高速化と組み合わさることで、パッチ未適用のサーバーが短期間で標的となるリスクが高まる。AI時代のセキュリティ運用では、脆弱性情報の即時収集と自動パッチ適用の仕組みが不可欠である。",
+   "tags": [
+    "nginx",
+    "cve-2026-123007",
+    "rce",
+    "http2"
+   ],
+   "keywords": [
+    "nginx",
+    "CVE-2026-123007",
+    "nginx2root",
+    "HTTP/2",
+    "RCE",
+    "リモートコード実行"
+   ],
+   "status": "ongoing",
+   "sources": [
+    {
+     "title": "10-Year-Old NGINX HTTP/2 Flaw Lets Unauthenticated Attackers Execute Code on Servers",
+     "url": "https://thehackernews.com/2026/11/10-year-old-nginx-http2-flaw-lets.html",
+     "publisher": "The Hacker News",
+     "published": "2026-11-19"
+    },
+    {
+     "title": "It’s NGINX’s turn to cause vulnpocalypse headaches",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1xbHB0YmFUQWtWZHhtNzFzNnd6dXpGX3cyaXc2cU9rbWdjSzh3UGc3aGR2WlVYbkdDb2VkN3BzMGxMTHNNMFk2OGpBeGVhR05NVTJGSGk4dlJzdjVSN1EzTFZ1UnNfcVFSNTQ1ZkxVbVk?oc=5",
+     "publisher": "CyberScoop",
+     "published": "2026-11-19"
+    },
+    {
+     "title": "CVE-2026-123007: Critical NGINX HTTP/2 Integer Underflow Leads to RCE (FIXED)",
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZ1ExVnFZd1l3VC1tdWRkdU14akJxdmtINGJvWTk5UmpVem9RYkRwN1VTTUJuYllDTFNIdUcwYkIzRnhnOVFlV3pUQWR4ajJZa1VGMWFmWHF4bk1fakVwTkRLZzZxbHczaXh1ZkhUa2NlTEo0ZWFJVFJxZHV4amtwVmtmT0g1dEllbnRuc3lXU3hpX2ZEemRDcmVUTjQyN1hnV2h1U0I5dVQ5eXRIdTN3bA?oc=5",
+     "publisher": "Rapid7",
+     "published": "2026-11-18"
+    }
+   ],
+   "timeline": [],
+   "created_at": "2026-11-19T07:37:15+09:00",
+   "updated_at": "2026-11-19T07:37:15+09:00"
+  },
   {
    "id": "2026-11-18-puppet-enterprise-rce-cve-2026-115731",
    "event_date": "2026-11-18",
@@ -110,10 +160,17 @@
      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE03OU9ONUlrYk5GeEl2Y2FVRngxSmFvTmFndlRreUwyZGhVWGlSeXEzeElsc3lUYmJKUzFFS216TFhTcmR3WFRnTzhYeWI2emNXMkJtUG05RXUxMEFuR091QnJrU1Y?oc=5",
      "publisher": "Impress Watch",
      "title": "「KARTE」情報漏えい、JINS・三菱UFJなど多数の企業に影響"
+    },
+    {
+     "date": "2026-11-18",
+     "note": "DHCは、顧客データ分析ツール「KARTE」を提供するプレイドへの不正アクセスにより、1911万件の情報流出を確認したと発表した。",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1DLWVFaTRNS0V1YWF2ZE12ZHQyYnNneVhHaEFGeG1xdF9VLURRTFpyRjVZdWs3aG9QNzM0WnFzc0N1S0Y2d0hyUEJKcXpXSzdnUkhDdE84cHFWc2JDOXRLOWlYeGQyVUU?oc=5",
+     "publisher": "朝日新聞",
+     "title": "DHC、1911万件の情報流出を確認 プレイドへの不正アクセスで"
     }
    ],
    "created_at": "2026-11-19T00:13:44+09:00",
-   "updated_at": "2026-11-19T00:16:27+09:00"
+   "updated_at": "2026-11-19T07:37:28+09:00"
   },
   {
    "id": "2026-11-18-equinor-cyberattack-norway",
@@ -213,10 +270,17 @@
      "url": "https://jvn.jp/vu/JVNVU99608534/",
      "publisher": "JVN 脆弱性情報",
      "title": "OpenJDKにおけるヒープベースのバッファオーバーフローの脆弱性"
+    },
+    {
+     "date": "2026-11-18",
+     "note": "SecurityWeekは、CalifがJira、Jenkins、KeycloakでRCEを実証した一方、VulnCheckは実環境でのRCEには標的ごとの追加作業が必要だと指摘したと報じた。",
+     "url": "https://www.securityweek.com/java4shell-vulnerability-puts-many-enterprise-applications-at-risk-of-takeover/",
+     "publisher": "SecurityWeek",
+     "title": "Java4Shell Vulnerability Puts Enterprise Applications at Risk of Takeover"
     }
    ],
    "created_at": "2026-11-18T07:36:50+09:00",
-   "updated_at": "2026-11-19T00:13:50+09:00"
+   "updated_at": "2026-11-19T07:37:41+09:00"
   },
   {
    "id": "2026-11-17-rakuten-securities-breach",
@@ -415,10 +479,17 @@
      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5CNTZuQ2NRMkRFSldXYlNpakJmXy1kenV0ODZON3NmR0NIdG1OVzFnemRjYi1UQUZ3WnYzcko2VWd1TjFuZlR2d3VfWHBCQzhOMkE1U2R6Zjk?oc=5",
      "publisher": "山陽新聞",
      "title": "理研が警察に被害報告 「富岳」への不正アクセス"
+    },
+    {
+     "date": "2026-11-18",
+     "note": "「富岳」運用系への不正アクセスで、窃取した情報を用いて他システムへの攻撃を試行していたことが判明。理研は利用者個人情報が流出した可能性があるとしている。",
+     "url": "https://www.security-next.com/192952",
+     "publisher": "Security NEXT",
+     "title": "理研「富岳」で侵害 - 窃取情報で他システムへの攻撃試行も"
     }
    ],
    "created_at": "2026-11-17T19:38:38+09:00",
-   "updated_at": "2026-11-19T00:14:35+09:00"
+   "updated_at": "2026-11-19T07:37:49+09:00"
   },
   {
    "id": "2026-11-16-optimizely-supply-chain-attack",
@@ -475,10 +546,17 @@
      "url": "https://therecord.media/optimizely-malicious-code-customer-sites",
      "publisher": "The Record",
      "title": "Website management platform Optimizely confirms hackers put malicious code into customer sites"
+    },
+    {
+     "date": "2026-11-18",
+     "note": "Optimizelyの脆弱性を悪用した不正コード配布について、影響を受けた178組織の中に日本のWebサイトも含まれることが判明した。",
+     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNTnVZVXhtSlcyUDhzUm9waUVWMldPSUxxaldwTzRNeXQ3eE9hc3NMVS14SFhJVWxWd3dhekJ2N1hmbEdEQ3FkaF9WeTlRTXhhMXBzZC05bHh0U19BLWt0R1RxellCUzJMelZNRnVPLUZnR0YtbzB0YVhsUk1USDhzNXdPbVpRSHJKSXR3RkxXZjlTOWhKQlRPdjBsWmJyVUw2ZmxkNDg1RXVVT1BpXzdB?oc=5",
+     "publisher": "合同会社ロケットボーイズ",
+     "title": "ウェブテストABツールOptimizelyの脆弱性悪用で178組織のWebサイトに不正コード-日本のサイトも影響"
     }
    ],
    "created_at": "2026-11-17T19:35:21+09:00",
-   "updated_at": "2026-11-18T07:36:56+09:00"
+   "updated_at": "2026-11-19T07:37:53+09:00"
   },
   {
    "id": "2026-11-13-check-point-php2shell-tsga",
@@ -579,10 +657,17 @@
      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5rbS1uekZkNWlyS08tZkFqanA1Q2t4S0FycHN1djQ0cTdfdy1zM1k4MWpuek5DUVJjOEhoaHl3aFh5TlN3SVlpdngwWFZNcE1NVE0w?oc=5",
      "publisher": "ビジネス+IT",
      "title": "Apache HTTP Serverの脆弱性、シンガポール当局が悪用警告、PoC公開"
+    },
+    {
+     "date": "2026-11-18",
+     "note": "CVE-2026-119618が実際に悪用され、リモートコード実行に至る攻撃が確認された。HTTP/2有効サーバーでは侵害調査と修正版2.4.71への更新が急務となる。",
+     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE04VEx1WEF4dkk3UFQ4QWh5c21VUDRUdk9xaFRlTFp5S3FoWk5SbEhQZGZqMUxjR1VjQ2pVMGtGQVRBWG1pb25yQ1EyVndLcHFVcUdjU05WdVZjMkxkN1d4dy1VdVRmbjJSY1RzRmFnQXVBUdIBd0FVX3lxTFBkZ1ZLOE5CM0pFcFozcjNfZllybWtheW1PTWZ0cmJBTkwyWnhFbjZ4ZVNmcThBYnF1UXNMX1FaVXlOdG5rcGRtbmUxMENpMWN1TjNBckEtejZFRUg2SGdyaGlDRFVpZzc0MGFYM2VuZmN2RnZkN244?oc=5",
+     "publisher": "GBHackers News",
+     "title": "Critical Apache HTTP Server Vulnerability Exploited in the Wild to Gain Remote Code Execution"
     }
    ],
    "created_at": "2026-11-17T19:36:10+09:00",
-   "updated_at": "2026-11-19T00:15:12+09:00"
+   "updated_at": "2026-11-19T07:37:57+09:00"
   }
  ]
 }
