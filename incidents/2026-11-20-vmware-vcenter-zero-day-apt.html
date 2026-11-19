@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VMware vCenterにCVSS 9.8の認証バイパス脆弱性、中国系APTがゼロデイで悪用｜Security Incident Watch</title>
+<meta name="description" content="米ブロードコム（旧VMware）の仮想化基盤「vCenter」に、ネットワーク経由で認証を回避できるクリティカルな脆弱性（CVSS 9.8）が公表された。Googleは、中国に関連するとみられる諜報グループが修正プログラム公開前にこの欠陥をゼロデイとして悪用していたと報告している。修正版は全サポート対象ブランチで提供済みで、未更新環境の早急な更新が求められる。">
+<meta property="og:title" content="VMware vCenterにCVSS 9.8の認証バイパス脆弱性、中国系APTがゼロデイで悪用｜Security Incident Watch">
+<meta property="og:description" content="米ブロードコム（旧VMware）の仮想化基盤「vCenter」に、ネットワーク経由で認証を回避できるクリティカルな脆弱性（CVSS 9.8）が公表された。Googleは、中国に関連するとみられる諜報グループが修正プログラム公開前にこの欠陥をゼロデイとして悪用していたと報告している。修正版は全サポート対象ブランチで提供済みで、未更新環境の早急な更新が求められる。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%A1%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <div class="masthead-top">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark" aria-hidden="true">◈</span>
+        <span class="brand-name">Security Incident Watch</span>
+      </a>
+    </div>
+    <h1><a href="../index.html">重大セキュリティ事故の記録</a></h1>
+    <p class="tagline">国内外の大規模な情報漏えいと重大な脆弱性を、<br class="br-sp">一日一件だけ選んで記録します。</p>
+  </div>
+</header>
+<main class="wrap article">
+  <p class="breadcrumb"><a href="../index.html">記事一覧</a><span aria-hidden="true"> / </span>重大な脆弱性</p>
+  <header class="article-head">
+    <div class="hero-meta">
+      <span class="badge s-high">重要</span>
+      <span class="badge c-vuln">重大な脆弱性</span>
+      <span class="meta-text">2026年11月20日 ・ 海外</span>
+    </div>
+    <h1>VMware vCenterにCVSS 9.8の認証バイパス脆弱性、中国系APTがゼロデイで悪用</h1>
+    <p class="lead">米ブロードコム（旧VMware）の仮想化基盤「vCenter」に、ネットワーク経由で認証を回避できるクリティカルな脆弱性（CVSS 9.8）が公表された。Googleは、中国に関連するとみられる諜報グループが修正プログラム公開前にこの欠陥をゼロデイとして悪用していたと報告している。修正版は全サポート対象ブランチで提供済みで、未更新環境の早急な更新が求められる。</p>
+    
+  </header>
+  <section class="article-section">
+  <h2>原因・侵入経路</h2>
+  <p>vCenterの認証処理の不備により、ネットワーク到達性さえあればログイン情報なしで管理権限を奪える認証バイパス。修正前から悪用が確認されたゼロデイで、Googleの調査チームは中国に関連する諜報目的のAPT（持続的標的型攻撃）の関与を指摘している。個々の攻撃手順や初期侵入経路の詳細は公表されていない。</p>
+</section><section class="article-section">
+  <h2>影響・被害規模</h2>
+  <p>vCenterは多数の仮想マシンを集中管理する基盤であり、管理権限を奪われると配下のサーバー群の停止・改変・情報窃取に波及しうる。ただし候補記事には被害組織数や情報漏えい規模は示されておらず不明。ブロードコムは全サポートブランチ向けの修正版を公開しており、未適用の環境は継続的な標的となる恐れがある。</p>
+</section><section class="article-section">
+  <h2>AI との関係</h2>
+  <p>AIの関与は確認されていない。仮想化基盤は「管理インターフェースへの認証バイパス1件」で全ゲストに影響が及ぶため、AIによる資産台帳の自動照合や管理画面の外部公開検知を平時から運用し、脆弱性公表当日に自組織の該当有無を確定できる体制を整えることが実務上の要点となる。</p>
+</section>
+  
+  <section class="sources">
+    <h2>出典</h2>
+    <ul><li>
+  <a href="https://www.securityweek.com/newly-patched-vmware-vcenter-flaw-exploited-as-zero-day-by-chinese-apt/" target="_blank" rel="noopener">Newly Patched VMware vCenter Flaw Exploited as Zero-Day by Chinese APT</a>
+  <span class="src-meta">SecurityWeek ・ 2026年11月20日</span>
+</li><li>
+  <a href="https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html" target="_blank" rel="noopener">Critical VMware vCenter Flaw (CVSS 9.8) Lets Network Attackers Bypass Authentication</a>
+  <span class="src-meta">The Hacker News ・ 2026年11月20日</span>
+</li></ul>
+  </section>
+  <nav class="article-nav"><a class="nav-link" href="2026-11-19-nginx-cve-2026-123007.html"><span>古い記事</span>NGINXに10年前から存在する認証不要のリモートコード実行脆弱性「nginx2root」、悪用が確認される</a></nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-col">
+      <p class="footer-title">このサイトについて</p>
+      <p>国内外の報道から、社会的影響の大きいセキュリティ事故と重大な脆弱性だけを選び、原因・影響・AIとの関係を整理して記録しています。記事本文は AI による要約・編集を含みます。正確な情報は各出典をご確認ください。</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">アーカイブ</p>
+      <p><a href="../index.html">記事一覧</a> ／ <a href="https://github.com/HiroshiOkada/security-incident-news" target="_blank" rel="noopener">GitHub</a></p>
+      <p class="footer-meta">最終生成 2026-11-20 07:37 JST ／ 最終選定 2026-11-20 07:37 JST</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

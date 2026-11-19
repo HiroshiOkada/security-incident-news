@@ -34,7 +34,7 @@
     </div>
     <h1>Check PointゲートウェイのPHP2Shell脆弱性悪用、TSGAバックドアとESXi消去を確認</h1>
     <p class="lead">Check Pointのセキュリティゲートウェイにおける「PHP2Shell」脆弱性が実際の攻撃で悪用され、未修正の機器にバックドア「TSGA」が仕込まれ、ESXiのファイルが消去される被害が確認された。攻撃者はGaia OSの未公開のローカル権限昇格脆弱性も連鎖させており、米CISAは悪用済み脆弱性カタログ（KEV）に追加した。</p>
-    
+    <p class="updated-note">最終更新 2026年11月20日（続報を追記）</p>
   </header>
   <section class="article-section">
   <h2>原因・侵入経路</h2>
@@ -46,7 +46,14 @@
   <h2>AI との関係</h2>
   <p>AIの関与は確認されていない。境界防御装置と仮想化基盤を同時に狙う連鎖攻撃では、AIによる異常検知だけに頼らず、機器の資産管理とパッチ適用の自動化を優先すべきだ。</p>
 </section>
-  
+  <section class="timeline">
+  <h2>その後の展開</h2>
+  <ol><li>
+  <span class="tl-date">2026年11月19日</span>
+  <span class="tl-note">一連のPHP2Shell悪用で、Palo Alto NetworksはPAN-OS管理インターフェースに対するCVE-2026-109618とCVE-2026-109619の悪用を確認したと公表した。</span>
+  <a class="tl-src" href="https://thehackernews.com/2026/11/everything-is-web-application-including.html" target="_blank" rel="noopener">The Hacker News</a>
+</li></ol>
+</section>
   <section class="sources">
     <h2>出典</h2>
     <ul><li>
@@ -71,7 +78,7 @@
     <div class="footer-col">
       <p class="footer-title">アーカイブ</p>
       <p><a href="../index.html">記事一覧</a> ／ <a href="https://github.com/HiroshiOkada/security-incident-news" target="_blank" rel="noopener">GitHub</a></p>
-      <p class="footer-meta">最終生成 2026-11-19 07:37 JST ／ 最終選定 2026-11-19 07:37 JST</p>
+      <p class="footer-meta">最終生成 2026-11-20 07:37 JST ／ 最終選定 2026-11-20 07:37 JST</p>
     </div>
   </div>
 </footer>
