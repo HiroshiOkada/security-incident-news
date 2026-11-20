@@ -1,6 +1,110 @@
 {
- "generated_at": "2026-11-20T07:37:03+09:00",
+ "generated_at": "2026-11-21T07:39:29+09:00",
  "incidents": [
+  {
+   "id": "2026-11-20-zozotown-breach-15-million",
+   "event_date": "2026-11-20",
+   "category": "breach",
+   "region": "jp",
+   "severity": "critical",
+   "title": "ZOZOTOWNで1518万人分の情報漏えい、プレイド「KARTE」不正アクセスが波及",
+   "lead": "ZOZOTOWNを運営するスタートトゥデイは11月20日、顧客情報1518万人分が流出した可能性があると発表した。原因は、同社が利用するマーケティングプラットフォーム「KARTE」を提供するプレイドへの不正アクセスで、被害は他社にも拡大している。",
+   "cause": "プレイドのシステムが不正アクセスを受け、同社が管理する顧客データベースが侵害された。ZOZOTOWNを含む複数の企業がKARTEを利用しており、そのデータが一括で流出したとみられる。プレイドは1億件超のデータ流出の可能性を公表している。",
+   "impact": "ZOZOTOWNでは、氏名や住所、電話番号、購入履歴など1518万人分の情報が流出した可能性がある。これは国内EC最大級の被害であり、クレジットカード情報は含まれていないとしているが、フィッシング詐欺など二次被害のリスクが高い。",
+   "ai_angle": "AIの関与は確認されていない。しかし、プレイドのKARTEはAIを活用したマーケティング自動化ツールであり、AIサービスを提供する企業がサイバー攻撃の標的となった事例として注目される。AIサービスのセキュリティ管理体制の強化が急務であることを示している。",
+   "tags": [
+    "情報漏えい",
+    "不正アクセス",
+    "EC",
+    "SaaS"
+   ],
+   "keywords": [
+    "ZOZOTOWN",
+    "スタートトゥデイ",
+    "プレイド",
+    "KARTE",
+    "情報漏えい",
+    "1518万人",
+    "1億件"
+   ],
+   "status": "ongoing",
+   "sources": [
+    {
+     "title": "【速報】ZOZOTOWNも1518万人情報漏えい",
+     "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBkVVhMYTdmblYzSjJKNmVDaGxkSmFHS1poakRZR2FKOUpvNEZFNlpBTnZKUXd5cTBoRFdCYmo5V05rX0hBWHR5ajdDVQ?oc=5",
+     "publisher": "47NEWS",
+     "published": "2026-11-20"
+    },
+    {
+     "title": "プレイド「KARTE」、不正アクセス被害1億件超 他社サービスに拡大も",
+     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5ENFJYeGo2Sm1vMzdjRkpySXZOc2dPdHp1Yi0wXzdJMnRPV0Vaa0tQMW1IVDhHRXNLS2tINGNOa2EtaHlibHo2a0Y2S0puZ1RLemRXMUhwX2VQMDR3a2JLQV9yR01obE5QUjM4Sg?oc=5",
+     "publisher": "日本経済新聞",
+     "published": "2026-11-20"
+    }
+   ],
+   "timeline": [
+    {
+     "date": "2026-11-20",
+     "note": "KARTEへの不正アクセスに伴い、プレイドは情報漏えいや漏えいのおそれがある企業がのべ約2200社に拡大したと発表した。被害発表も相次いでいる。",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1YOEdjbTZaWWcyWWVOMTFDZU1VNWhTNWEtNEZONkVPUjF4b3pKTFFHNlFLOWpCMk94eVdacDVvemVtTk5xck9yVG9rcG11YWpkZHRUYVVXWXhLSFU?oc=5",
+     "publisher": "下野新聞社",
+     "title": "プレイド、情報漏えい２２００社"
+    }
+   ],
+   "created_at": "2026-11-21T07:37:12+09:00",
+   "updated_at": "2026-11-21T07:38:47+09:00"
+  },
+  {
+   "id": "2026-11-20-gss-government-breach",
+   "event_date": "2026-11-20",
+   "category": "breach",
+   "region": "jp",
+   "severity": "critical",
+   "title": "政府の情報システム基盤GSSに不正アクセス、内部資料漏えいの可能性",
+   "lead": "デジタル庁は11月20日、政府の情報システム基盤「GSS（政府共通プラットフォーム）」が不正アクセスを受け、内部資料が流出した可能性があると発表した。同日、警察庁もサイバー捜査の初動対応専門チーム「FFF」を設置するなど、事態を重視している。",
+   "cause": "GSSのシステムに外部から不正アクセスがあり、内部の文書管理システムが侵害された。侵入経路は調査中だが、標的型攻撃の可能性が指摘されている。政府の基幹システムへの侵入は極めて異例で、国家関与の疑いも含めて捜査が進められている。",
+   "impact": "流出した可能性があるのは、行政文書や内部資料など。具体的な件数や内容は明らかにされていないが、国家安全保障に関わる情報が含まれている可能性もあり、影響は計り知れない。デジタル庁は該当システムを一時停止し、原因究明と復旧を急いでいる。",
+   "ai_angle": "AIの関与は確認されていない。ただし、政府システムへの不正アクセスは、AIを用いた高度な攻撃手法が使われた可能性もあり、今後の調査が待たれる。AIによる防御システムの導入が急務であることを示す事例となった。",
+   "tags": [
+    "不正アクセス",
+    "政府システム",
+    "情報漏えい",
+    "国家セキュリティ"
+   ],
+   "keywords": [
+    "GSS",
+    "政府共通プラットフォーム",
+    "デジタル庁",
+    "不正アクセス",
+    "情報漏えい",
+    "警察庁",
+    "FFF"
+   ],
+   "status": "ongoing",
+   "sources": [
+    {
+     "title": "政府の情報システム基盤GSSで不正アクセス 内部資料漏えいの可能性",
+     "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1GY2VLbGJremFTcnRsdDI1NHR3QWdTN2JBeEd2UkNkUlQ4ZkNvb3cxSnlNLVV5aFdKNTdzVkNxaDBQdXFDRWlrNDNCVFU3OHIydjZmcV9mWQ?oc=5",
+     "publisher": "TBS NEWS DIG",
+     "published": "2026-11-20"
+    },
+    {
+     "title": "政府の内部資料流出か、基幹システムに不正アクセス デジタル庁発表（朝日新聞）",
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1BNkhPaG1aOEpObnY3U0NKQWxseFZuUEtBejdJRk8tamFjczI4S2hRVVNVcWt4NE92UVB2VENKaXJGTkJRUmVsQkl3MjNGaVVtZ1B3bXZ0bzZyczkzb1FZWUlMWURVRFgyOG5TX2p0ckJHNlhQMDZqcjU2dUFOSEE?oc=5",
+     "publisher": "Yahoo!ニュース",
+     "published": "2026-11-20"
+    },
+    {
+     "title": "デジタル庁運用システムに不正アクセス 行政文書漏えいか：時事ドットコム",
+     "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1EaWdSNWlLbE1rWThZR0V3QTJpTDdNeGpIczI0QTVvcVVkQ0J4SkxiWTJ5cUk3TmtGR3BLcVlKeW41YW5ySlJEZGlKT1R3YnRTQi15bDQzdlBqSU1TRVl5RzhHVQ?oc=5",
+     "publisher": "時事ドットコム",
+     "published": "2026-11-20"
+    }
+   ],
+   "timeline": [],
+   "created_at": "2026-11-21T07:37:12+09:00",
+   "updated_at": "2026-11-21T07:37:12+09:00"
+  },
   {
    "id": "2026-11-20-vmware-vcenter-zero-day-apt",
    "event_date": "2026-11-20",
@@ -42,9 +146,17 @@
      "published": "2026-11-20"
     }
    ],
-   "timeline": [],
+   "timeline": [
+    {
+     "date": "2026-11-20",
+     "note": "中国系とされるAPT「Armory Castle（旧UNC5221）」が、vCenterの脆弱性CVE-2026-123890を2026年9月初旬からゼロデイ悪用し、管理者権限を取得してデータを窃取していたと報じられた。",
+     "url": "https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html",
+     "publisher": "The Hacker News",
+     "title": "China-Linked Hackers Exploit Critical VMware vCenter Zero-Day to Gain Admin Access and Steal Data"
+    }
+   ],
    "created_at": "2026-11-20T07:35:57+09:00",
-   "updated_at": "2026-11-20T07:35:57+09:00"
+   "updated_at": "2026-11-21T07:37:16+09:00"
   },
   {
    "id": "2026-11-19-nginx-cve-2026-123007",
@@ -106,10 +218,108 @@
      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOaXlRMnM2ODZ1TzdaSG1KaFA2a2xpVjhfRFE2MHNIa2RqeFhhYngzSkVTZ043by1taTdmVFFJZ3JNVGN2OXlxVTNfZDk0ZTdhN0lTMnpiRTB1dUJSWUtTUVNzYjM5X091WnBqNjhuUDczMmRxMWQtMVdrNmRyUDNGRk9n?oc=5",
      "publisher": "Help Net Security",
      "title": "NGINX2Root: F5 patches five critical NGINX vulnerabilities"
+    },
+    {
+     "date": "2026-11-20",
+     "note": "nginxの修正版が公開されたが、バージョン番号を確認するだけでは自社サーバーが安全か判断できないと専門メディアが指摘している。",
+     "url": "https://www.itmedia.co.jp/enterprise/articles/2611/20/news039.html",
+     "publisher": "ITmedia エンタープライズ",
+     "title": "nginxに深刻な脆弱性、遠隔からコードを実行される可能性も 「バージョン確認だけ」では不十分な理由"
     }
    ],
    "created_at": "2026-11-19T07:37:15+09:00",
-   "updated_at": "2026-11-20T07:36:08+09:00"
+   "updated_at": "2026-11-21T07:37:18+09:00"
+  },
+  {
+   "id": "2026-11-18-mufg-data-breach-8-million",
+   "event_date": "2026-11-18",
+   "category": "breach",
+   "region": "jp",
+   "severity": "critical",
+   "title": "三菱UFJ銀行などMUFG5社で約800万件の顧客情報漏えい、委託先への不正アクセスが原因",
+   "lead": "三菱UFJ銀行などMUFG（三菱UFJフィナンシャル・グループ）傘下の5社で、顧客情報約800万件が漏えいした可能性があることが明らかになった。委託先企業のシステムへの不正アクセスが原因で、個人を特定できる情報は含まれていないとしている。",
+   "cause": "MUFGが業務委託する企業のシステムが第三者による不正アクセスを受け、顧客情報が外部に流出した。漏えいした情報は性別、年齢、居住地域、メールアドレスなどで、氏名や口座番号など個人を特定できる情報は含まれていないとみられる。",
+   "impact": "三菱UFJ銀行で約650万件、他のグループ会社を含めると約800万件の顧客情報が漏えいした可能性がある。金融機関の顧客情報が大量に流出したことで、フィッシング詐欺など二次被害のリスクが高まっている。",
+   "ai_angle": "AIの関与は確認されていない。AI時代においても、委託先を含むサプライチェーン全体のセキュリティ管理が重要であり、特に金融機関は顧客データの保護について厳格な対策が求められる。",
+   "tags": [
+    "三菱UFJ銀行",
+    "MUFG",
+    "情報漏えい",
+    "不正アクセス"
+   ],
+   "keywords": [
+    "三菱UFJ銀行",
+    "MUFG",
+    "情報漏えい",
+    "不正アクセス",
+    "委託先",
+    "800万件"
+   ],
+   "status": "ongoing",
+   "sources": [
+    {
+     "title": "年収や資産情報など個人情報流出の可能性 - 楽天証券",
+     "url": "https://www.security-next.com/193015",
+     "publisher": "Security NEXT",
+     "published": "2026-11-18"
+    },
+    {
+     "title": "三菱UFJ銀行、委託先企業で不正アクセス 性別や年齢650万件が漏洩",
+     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBkcUEyZFRuN2E1cDBBLWx2YWlneElMdWpqdnlXdzE5S0hPaVFkXzBDdWZsSjl5d015T3hlMGR2bTdjaTNkS0ZoWWREOWpmaXcwUGJGRHFDSG5MaFBIZVpoSHhqdmxiVnBuU2thTQ?oc=5",
+     "publisher": "日本経済新聞",
+     "published": "2026-11-18"
+    },
+    {
+     "title": "三菱UFJ銀行などMUFG5社で約800万件の情報漏えい 個人を特定できる情報はなし",
+     "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1mWWRvS1VpSF9hRkxMUUdjdXlfSGVma05lUWVGQXNKUzUtanVNUllZblc5c2Z3bjdlclBhRWVQb1VLMnJwekZ6V29SSFFxZGRIQVNJTVNYbw?oc=5",
+     "publisher": "TBS NEWS DIG",
+     "published": "2026-11-18"
+    },
+    {
+     "title": "三井住友銀で情報漏えい、最大1400万件（共同通信）",
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5IV01LMUFXN1JCai1UeDZHWG9fXzloU0ZLM2pDajluMXRmTGhMeDc5UU96TWxTaWF3QjRSV0lwa3ZWX0ZwalA3OElZN0IteUY1Wi1yT2dMeGJxR2V2ZGFXSnR1Z0pXZjE4Q01HZTRuQmxVTzV0WkpWcVV4V0xTRDA?oc=5",
+     "publisher": "Yahoo!ニュース",
+     "published": "2026-11-20"
+    },
+    {
+     "title": "訂正-三井住友銀、委託先に不正アクセス 最大1400万件の情報漏えい（ロイター）",
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1NM282OUQ4cDcxdjRhc2I1M3I3R3NwZnFXNU5KV3RpVmRKUUdYYnpXUGgycXFtdk9JanRLY1Q2VUlTczcwbENZVE1WQ0tuQXRLb1E0c3BoUnoyLTlGU0ZzX2poOFhzMU92VHZ1eTdKMkxsM0l1VFMxY09MZFE4MW8?oc=5",
+     "publisher": "Yahoo!ニュース",
+     "published": "2026-11-20"
+    }
+   ],
+   "timeline": [
+    {
+     "date": "2026-11-18",
+     "note": "三菱UFJ銀行で650万件の顧客情報漏えいが確認され、性別・年齢・居住地域・メールアドレスが含まれるが個人特定情報はなしと発表。",
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1PcWdNN2ZCenQ1Y0doOHlGUUh3SWF3elFmSlgzVkZvaVFGbVRqNGZScWc2MW5RcnlRUzBFaFk2c1NCUmxPLVJRVHlfQzgwdVZtYWZ4ZXJMb21Id3VWbFlyVWV3MGR5c2Y4dXItNWdRaUtmaUVVdjBmcVc2WlhlLTA?oc=5",
+     "publisher": "Yahoo!ニュース",
+     "title": "三菱UFJ銀行で650万件の顧客情報漏えい 性別・年齢・居住地域でメアドなど個人特定の情報なし 委託会社への不正アクセスが原因（FNNプライムオンライン（フジテレビ系））"
+    },
+    {
+     "date": "2026-11-18",
+     "note": "原因は顧客データ分析ツール「KARTE」の情報漏えいで、JINSなど多数の企業に影響が波及していると判明。",
+     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE03OU9ONUlrYk5GeEl2Y2FVRngxSmFvTmFndlRreUwyZGhVWGlSeXEzeElsc3lUYmJKUzFFS216TFhTcmR3WFRnTzhYeWI2emNXMkJtUG05RXUxMEFuR091QnJrU1Y?oc=5",
+     "publisher": "Impress Watch",
+     "title": "「KARTE」情報漏えい、JINS・三菱UFJなど多数の企業に影響"
+    },
+    {
+     "date": "2026-11-18",
+     "note": "DHCは、顧客データ分析ツール「KARTE」を提供するプレイドへの不正アクセスにより、1911万件の情報流出を確認したと発表した。",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1DLWVFaTRNS0V1YWF2ZE12ZHQyYnNneVhHaEFGeG1xdF9VLURRTFpyRjVZdWs3aG9QNzM0WnFzc0N1S0Y2d0hyUEJKcXpXSzdnUkhDdE84cHFWc2JDOXRLOWlYeGQyVUU?oc=5",
+     "publisher": "朝日新聞",
+     "title": "DHC、1911万件の情報流出を確認 プレイドへの不正アクセスで"
+    },
+    {
+     "date": "2026-11-20",
+     "note": "KARTEを提供するプレイドは、不正アクセスによる情報漏えいの影響がのべ約2200社に拡大したと発表。同社は赤字転落となった。",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1YOEdjbTZaWWcyWWVOMTFDZU1VNWhTNWEtNEZONkVPUjF4b3pKTFFHNlFLOWpCMk94eVdacDVvemVtTk5xck9yVG9rcG11YWpkZHRUYVVXWXhLSFU?oc=5",
+     "publisher": "下野新聞社",
+     "title": "プレイド、情報漏えい２２００社"
+    }
+   ],
+   "created_at": "2026-11-19T00:13:44+09:00",
+   "updated_at": "2026-11-21T07:37:23+09:00"
   },
   {
    "id": "2026-11-18-puppet-enterprise-rce-cve-2026-115731",
@@ -159,78 +369,6 @@
    "timeline": [],
    "created_at": "2026-11-19T00:13:44+09:00",
    "updated_at": "2026-11-19T00:13:44+09:00"
-  },
-  {
-   "id": "2026-11-18-mufg-data-breach-8-million",
-   "event_date": "2026-11-18",
-   "category": "breach",
-   "region": "jp",
-   "severity": "high",
-   "title": "三菱UFJ銀行などMUFG5社で約800万件の顧客情報漏えい、委託先への不正アクセスが原因",
-   "lead": "三菱UFJ銀行などMUFG（三菱UFJフィナンシャル・グループ）傘下の5社で、顧客情報約800万件が漏えいした可能性があることが明らかになった。委託先企業のシステムへの不正アクセスが原因で、個人を特定できる情報は含まれていないとしている。",
-   "cause": "MUFGが業務委託する企業のシステムが第三者による不正アクセスを受け、顧客情報が外部に流出した。漏えいした情報は性別、年齢、居住地域、メールアドレスなどで、氏名や口座番号など個人を特定できる情報は含まれていないとみられる。",
-   "impact": "三菱UFJ銀行で約650万件、他のグループ会社を含めると約800万件の顧客情報が漏えいした可能性がある。金融機関の顧客情報が大量に流出したことで、フィッシング詐欺など二次被害のリスクが高まっている。",
-   "ai_angle": "AIの関与は確認されていない。AI時代においても、委託先を含むサプライチェーン全体のセキュリティ管理が重要であり、特に金融機関は顧客データの保護について厳格な対策が求められる。",
-   "tags": [
-    "三菱UFJ銀行",
-    "MUFG",
-    "情報漏えい",
-    "不正アクセス"
-   ],
-   "keywords": [
-    "三菱UFJ銀行",
-    "MUFG",
-    "情報漏えい",
-    "不正アクセス",
-    "委託先",
-    "800万件"
-   ],
-   "status": "ongoing",
-   "sources": [
-    {
-     "title": "年収や資産情報など個人情報流出の可能性 - 楽天証券",
-     "url": "https://www.security-next.com/193015",
-     "publisher": "Security NEXT",
-     "published": "2026-11-18"
-    },
-    {
-     "title": "三菱UFJ銀行、委託先企業で不正アクセス 性別や年齢650万件が漏洩",
-     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBkcUEyZFRuN2E1cDBBLWx2YWlneElMdWpqdnlXdzE5S0hPaVFkXzBDdWZsSjl5d015T3hlMGR2bTdjaTNkS0ZoWWREOWpmaXcwUGJGRHFDSG5MaFBIZVpoSHhqdmxiVnBuU2thTQ?oc=5",
-     "publisher": "日本経済新聞",
-     "published": "2026-11-18"
-    },
-    {
-     "title": "三菱UFJ銀行などMUFG5社で約800万件の情報漏えい 個人を特定できる情報はなし",
-     "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1mWWRvS1VpSF9hRkxMUUdjdXlfSGVma05lUWVGQXNKUzUtanVNUllZblc5c2Z3bjdlclBhRWVQb1VLMnJwekZ6V29SSFFxZGRIQVNJTVNYbw?oc=5",
-     "publisher": "TBS NEWS DIG",
-     "published": "2026-11-18"
-    }
-   ],
-   "timeline": [
-    {
-     "date": "2026-11-18",
-     "note": "三菱UFJ銀行で650万件の顧客情報漏えいが確認され、性別・年齢・居住地域・メールアドレスが含まれるが個人特定情報はなしと発表。",
-     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1PcWdNN2ZCenQ1Y0doOHlGUUh3SWF3elFmSlgzVkZvaVFGbVRqNGZScWc2MW5RcnlRUzBFaFk2c1NCUmxPLVJRVHlfQzgwdVZtYWZ4ZXJMb21Id3VWbFlyVWV3MGR5c2Y4dXItNWdRaUtmaUVVdjBmcVc2WlhlLTA?oc=5",
-     "publisher": "Yahoo!ニュース",
-     "title": "三菱UFJ銀行で650万件の顧客情報漏えい 性別・年齢・居住地域でメアドなど個人特定の情報なし 委託会社への不正アクセスが原因（FNNプライムオンライン（フジテレビ系））"
-    },
-    {
-     "date": "2026-11-18",
-     "note": "原因は顧客データ分析ツール「KARTE」の情報漏えいで、JINSなど多数の企業に影響が波及していると判明。",
-     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE03OU9ONUlrYk5GeEl2Y2FVRngxSmFvTmFndlRreUwyZGhVWGlSeXEzeElsc3lUYmJKUzFFS216TFhTcmR3WFRnTzhYeWI2emNXMkJtUG05RXUxMEFuR091QnJrU1Y?oc=5",
-     "publisher": "Impress Watch",
-     "title": "「KARTE」情報漏えい、JINS・三菱UFJなど多数の企業に影響"
-    },
-    {
-     "date": "2026-11-18",
-     "note": "DHCは、顧客データ分析ツール「KARTE」を提供するプレイドへの不正アクセスにより、1911万件の情報流出を確認したと発表した。",
-     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1DLWVFaTRNS0V1YWF2ZE12ZHQyYnNneVhHaEFGeG1xdF9VLURRTFpyRjVZdWs3aG9QNzM0WnFzc0N1S0Y2d0hyUEJKcXpXSzdnUkhDdE84cHFWc2JDOXRLOWlYeGQyVUU?oc=5",
-     "publisher": "朝日新聞",
-     "title": "DHC、1911万件の情報流出を確認 プレイドへの不正アクセスで"
-    }
-   ],
-   "created_at": "2026-11-19T00:13:44+09:00",
-   "updated_at": "2026-11-19T07:37:28+09:00"
   },
   {
    "id": "2026-11-18-equinor-cyberattack-norway",
@@ -450,10 +588,17 @@
      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE8zYWUtb2xYOUlCZWNKYkV2N1lnandDSHhBRHl3Y3h4ck95S0lWYnVpOGRzdklneEYteEdNU3Q5SER4SjVZcmZpUTRueUM0ekdvd2x5S3g3TXQ1Ykw5R08zT2VWeVFIUFlLSWNsN1B2VVBrclZabkY3YW40bWhEY1E?oc=5",
      "publisher": "Yahoo!ニュース",
      "title": "【独自】金融庁が楽天証券に報告徴求命令 顧客の年収や金融資産などの個人情報漏えい受け"
+    },
+    {
+     "date": "2026-11-20",
+     "note": "楽天証券の顧客情報流出で、片山金融相は「非常に遺憾で重く受け止めている」と述べ、金融庁が報告徴求命令を出した。集団訴訟に向けた準備サイトには2万人超が登録している。",
+     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5UQVpQc0N1YlpWaEc0TUMtRWZRWi1KLVdUVHVrbVk3ZndQV25tUTdFNEd5Y29Gb2lweC1WY3ZKR2VabzItdnJHV3M0N2UwdlFGNzhTbm83TVJwUkotR0tncUlFSTE?oc=5",
+     "publisher": "読売新聞",
+     "title": "楽天証券の顧客情報流出、片山金融相「非常に遺憾で重く受け止めている」…２万人超が「集団訴訟」へ登録"
     }
    ],
    "created_at": "2026-11-17T19:38:38+09:00",
-   "updated_at": "2026-11-20T07:36:45+09:00"
+   "updated_at": "2026-11-21T07:37:54+09:00"
   },
   {
    "id": "2026-11-17-jins-data-breach",
@@ -501,10 +646,17 @@
      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE03OU9ONUlrYk5GeEl2Y2FVRngxSmFvTmFndlRreUwyZGhVWGlSeXEzeElsc3lUYmJKUzFFS216TFhTcmR3WFRnTzhYeWI2emNXMkJtUG05RXUxMEFuR091QnJrU1Y?oc=5",
      "publisher": "Impress Watch",
      "title": "「KARTE」情報漏えい、JINS・三菱UFJなど多数の企業に影響"
+    },
+    {
+     "date": "2026-11-20",
+     "note": "プレイドの調査でKARTE関連の被害が1億件超と判明。三井住友銀など他社にも拡大し、ジンズの被害もこの一部とみられる。",
+     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5ENFJYeGo2Sm1vMzdjRkpySXZOc2dPdHp1Yi0wXzdJMnRPV0Vaa0tQMW1IVDhHRXNLS2tINGNOa2EtaHlibHo2a0Y2S0puZ1RLemRXMUhwX2VQMDR3a2JLQV9yR01obE5QUjM4Sg?oc=5",
+     "publisher": "日本経済新聞",
+     "title": "プレイド「KARTE」、不正アクセス被害1億件超 他社サービスに拡大も"
     }
    ],
    "created_at": "2026-11-17T19:40:52+09:00",
-   "updated_at": "2026-11-19T00:14:28+09:00"
+   "updated_at": "2026-11-21T07:38:21+09:00"
   },
   {
    "id": "2026-11-17-fugaku-unauthorized-access",
