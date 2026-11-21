@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-21T07:39:29+09:00",
+ "generated_at": "2026-11-22T07:36:49+09:00",
  "incidents": [
   {
    "id": "2026-11-20-zozotown-breach-15-million",
@@ -49,10 +49,17 @@
      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1YOEdjbTZaWWcyWWVOMTFDZU1VNWhTNWEtNEZONkVPUjF4b3pKTFFHNlFLOWpCMk94eVdacDVvemVtTk5xck9yVG9rcG11YWpkZHRUYVVXWXhLSFU?oc=5",
      "publisher": "下野新聞社",
      "title": "プレイド、情報漏えい２２００社"
+    },
+    {
+     "date": "2026-11-21",
+     "note": "プレイドのマーケティングプラットフォーム「KARTE」への不正アクセスによるサイバー攻撃で、三井住友銀行は最大約1,400万件の情報漏えいを公表した。",
+     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQTnpjcmVVMFZ3R2FrYkVZZEhjc1RvS3RmbWtjUlJEWHJBQ1dXSzB2UWVVejFXRFlpenBCMXZIOUtMaWgyX0RDcjlYd1JWdFVoajJncGxtNWtmcGZBb1FpVnhmS2xLb21fWC1XNTVRUDA0aXY0ajZqYmZhX0RaeEYxemVULS1laXVER1JYb293VUVvcDJwaVJMTTg3WlZ5OWljNmIwcVlB?oc=5",
+     "publisher": "合同会社ロケットボーイズ",
+     "title": "三井住友銀行、最大約1,400万件が情報漏えい プレイド「KARTE」への不正アクセスによるサイバー攻撃で"
     }
    ],
    "created_at": "2026-11-21T07:37:12+09:00",
-   "updated_at": "2026-11-21T07:38:47+09:00"
+   "updated_at": "2026-11-22T07:35:59+09:00"
   },
   {
    "id": "2026-11-20-gss-government-breach",
@@ -106,6 +113,64 @@
    "updated_at": "2026-11-21T07:37:12+09:00"
   },
   {
+   "id": "2026-11-20-peach-yumirlink-breach",
+   "event_date": "2026-11-20",
+   "category": "breach",
+   "region": "jp",
+   "severity": "high",
+   "title": "ピーチで最大899万件の個人情報漏えい、メール配信委託先ユミルリンクへの不正アクセスが原因",
+   "lead": "LCCのピーチ（Peach Aviation）で、利用客の氏名・住所・旅程などを含む最大約899万件の個人情報が漏えいした可能性がある。同社が利用するメール配信サービス「ユミルリンク」への不正アクセスが原因で、委託先を経由したサプライチェーン型の漏えいとなった。ユミルリンク側では、延べ4,786万件の配信先情報が流出したとされている。",
+   "cause": "原因は自社システムではなく、メール配信を委託していたユミルリンクのサービス基盤への不正アクセス。配信リストとして保持されていた氏名・住所・旅程などの情報が外部に持ち出されたとみられる。侵入経路や認証情報の窃取手口など、攻撃の具体的な初期侵入ベクトルは公表されておらず不明。",
+   "impact": "ピーチ分だけで最大約899万件、委託先のユミルリンク全体では延べ4,786万4,147件の配信先情報が漏えいしたとされる。氏名・住所に加えて旅程という文脈情報が含まれるため、実在する予約や搭乗予定を装った標的型フィッシングに悪用される恐れがある。ピーチ側の運航や予約業務への影響は不明。",
+   "ai_angle": "AIの関与は確認されていない。ただし旅程や氏名・住所がセットで流出した点は、生成AIで自然な文面の標的型メールを大量生成する際の材料になり得る。対策としては、メール配信委託先に渡すデータの最小化と、送信ドメイン認証（DMARC等）の徹底によるなりすまし送信の抑止が実務上の要点となる。",
+   "tags": [
+    "情報漏えい",
+    "航空",
+    "サプライチェーン",
+    "委託先"
+   ],
+   "keywords": [
+    "ピーチ",
+    "Peach Aviation",
+    "ユミルリンク",
+    "メール配信サービス",
+    "899万件",
+    "4786万件",
+    "不正アクセス",
+    "個人情報漏えい"
+   ],
+   "status": "ongoing",
+   "sources": [
+    {
+     "title": "ピーチで899万件の個人情報漏えい 氏名・住所・旅程まで、原因は委託先のメール配信（ビジネス＋IT）",
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1YYVNCSUlXTndHdEpFSElwY3JaOTdENWMwaDdOS1Vjcmg3T29BZ1pWNUxYRThwOHpXd2Rsdi1fUE5EQUpJUVFQTmRpaEdzWVlWUEJEVEFzQ2RGdGp3blhtMVhUeHZTM3JueHhWYXhISWg3UVR1MzAyX09ic0pIODA?oc=5",
+     "publisher": "Yahoo!ニュース",
+     "published": "2026-11-21"
+    },
+    {
+     "title": "ピーチで899万件の個人情報漏えい 氏名・住所・旅程まで、原因は委託先のメール配信",
+     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1Ia2c5WkFOWTdIZUgtTjNtaE9Ea19pTFNBbkRlYUg3bXNxWTVKN3liNTB2MmI3a0V5Nk5RdHh4OEp3dEN5MDBtM2dtM1pTb1pFd1BJ?oc=5",
+     "publisher": "ビジネス+IT",
+     "published": "2026-11-21"
+    },
+    {
+     "title": "ピーチ、ユミルリンクへの不正アクセスで約899万件の個人情報が漏えい",
+     "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5MRzRxeGlDSUVIM2dYcGVJd1FsVWpySWZOTkNVNW9Ma2J0QVNCRGhYWWxnQjNXeDJZVVA2ejBqLWJyRHhtWDI4QTQzTk1qQW5GUWRrNENPQQ?oc=5",
+     "publisher": "TRAICY（トライシー）",
+     "published": "2026-11-20"
+    },
+    {
+     "title": "ユミルリンクのメール配信サービスに不正アクセス、延べ4,786万4,147件の配信先情報が漏えい",
+     "url": "https://scan.netsecurity.ne.jp/article/2026/11/20/56860.html",
+     "publisher": "ScanNetSecurity",
+     "published": "2026-11-20"
+    }
+   ],
+   "timeline": [],
+   "created_at": "2026-11-22T07:35:54+09:00",
+   "updated_at": "2026-11-22T07:35:54+09:00"
+  },
+  {
    "id": "2026-11-20-vmware-vcenter-zero-day-apt",
    "event_date": "2026-11-20",
    "category": "vulnerability",
@@ -153,10 +218,17 @@
      "url": "https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html",
      "publisher": "The Hacker News",
      "title": "China-Linked Hackers Exploit Critical VMware vCenter Zero-Day to Gain Admin Access and Steal Data"
+    },
+    {
+     "date": "2026-11-20",
+     "note": "米CISAは11月20日、vCenterの認証バイパス脆弱性CVE-2026-123890を含む4件をKEVカタログに追加し、活発な悪用の証拠があると明らかにした。",
+     "url": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+     "publisher": "CISA Advisories",
+     "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog"
     }
    ],
    "created_at": "2026-11-20T07:35:57+09:00",
-   "updated_at": "2026-11-21T07:37:16+09:00"
+   "updated_at": "2026-11-22T07:36:03+09:00"
   },
   {
    "id": "2026-11-19-nginx-cve-2026-123007",
@@ -316,10 +388,17 @@
      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1YOEdjbTZaWWcyWWVOMTFDZU1VNWhTNWEtNEZONkVPUjF4b3pKTFFHNlFLOWpCMk94eVdacDVvemVtTk5xck9yVG9rcG11YWpkZHRUYVVXWXhLSFU?oc=5",
      "publisher": "下野新聞社",
      "title": "プレイド、情報漏えい２２００社"
+    },
+    {
+     "date": "2026-11-21",
+     "note": "KARTEへの不正アクセスによる情報漏えいは三井住友銀行にも波及し、最大約1,400万件の顧客情報が漏えいしたことが分かった。",
+     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQTnpjcmVVMFZ3R2FrYkVZZEhjc1RvS3RmbWtjUlJEWHJBQ1dXSzB2UWVVejFXRFlpenBCMXZIOUtMaWgyX0RDcjlYd1JWdFVoajJncGxtNWtmcGZBb1FpVnhmS2xLb21fWC1XNTVRUDA0aXY0ajZqYmZhX0RaeEYxemVULS1laXVER1JYb293VUVvcDJwaVJMTTg3WlZ5OWljNmIwcVlB?oc=5",
+     "publisher": "合同会社ロケットボーイズ",
+     "title": "三井住友銀行、最大約1,400万件が情報漏えい プレイド「KARTE」への不正アクセスによるサイバー攻撃で"
     }
    ],
    "created_at": "2026-11-19T00:13:44+09:00",
-   "updated_at": "2026-11-21T07:37:23+09:00"
+   "updated_at": "2026-11-22T07:36:14+09:00"
   },
   {
    "id": "2026-11-18-puppet-enterprise-rce-cve-2026-115731",

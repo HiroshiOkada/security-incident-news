@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ピーチで最大899万件の個人情報漏えい、メール配信委託先ユミルリンクへの不正アクセスが原因｜Security Incident Watch</title>
+<meta name="description" content="LCCのピーチ（Peach Aviation）で、利用客の氏名・住所・旅程などを含む最大約899万件の個人情報が漏えいした可能性がある。同社が利用するメール配信サービス「ユミルリンク」への不正アクセスが原因で、委託先を経由したサプライチェーン型の漏えいとなった。ユミルリンク側では、延べ4,786万件の配信先情報が流出したとされている。">
+<meta property="og:title" content="ピーチで最大899万件の個人情報漏えい、メール配信委託先ユミルリンクへの不正アクセスが原因｜Security Incident Watch">
+<meta property="og:description" content="LCCのピーチ（Peach Aviation）で、利用客の氏名・住所・旅程などを含む最大約899万件の個人情報が漏えいした可能性がある。同社が利用するメール配信サービス「ユミルリンク」への不正アクセスが原因で、委託先を経由したサプライチェーン型の漏えいとなった。ユミルリンク側では、延べ4,786万件の配信先情報が流出したとされている。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%A1%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <div class="masthead-top">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark" aria-hidden="true">◈</span>
+        <span class="brand-name">Security Incident Watch</span>
+      </a>
+    </div>
+    <h1><a href="../index.html">重大セキュリティ事故の記録</a></h1>
+    <p class="tagline">国内外の大規模な情報漏えいと重大な脆弱性を、<br class="br-sp">一日一件だけ選んで記録します。</p>
+  </div>
+</header>
+<main class="wrap article">
+  <p class="breadcrumb"><a href="../index.html">記事一覧</a><span aria-hidden="true"> / </span>情報漏えい・侵害</p>
+  <header class="article-head">
+    <div class="hero-meta">
+      <span class="badge s-high">重要</span>
+      <span class="badge c-breach">情報漏えい・侵害</span>
+      <span class="meta-text">2026年11月20日 ・ 国内</span>
+    </div>
+    <h1>ピーチで最大899万件の個人情報漏えい、メール配信委託先ユミルリンクへの不正アクセスが原因</h1>
+    <p class="lead">LCCのピーチ（Peach Aviation）で、利用客の氏名・住所・旅程などを含む最大約899万件の個人情報が漏えいした可能性がある。同社が利用するメール配信サービス「ユミルリンク」への不正アクセスが原因で、委託先を経由したサプライチェーン型の漏えいとなった。ユミルリンク側では、延べ4,786万件の配信先情報が流出したとされている。</p>
+    
+  </header>
+  <section class="article-section">
+  <h2>原因・侵入経路</h2>
+  <p>原因は自社システムではなく、メール配信を委託していたユミルリンクのサービス基盤への不正アクセス。配信リストとして保持されていた氏名・住所・旅程などの情報が外部に持ち出されたとみられる。侵入経路や認証情報の窃取手口など、攻撃の具体的な初期侵入ベクトルは公表されておらず不明。</p>
+</section><section class="article-section">
+  <h2>影響・被害規模</h2>
+  <p>ピーチ分だけで最大約899万件、委託先のユミルリンク全体では延べ4,786万4,147件の配信先情報が漏えいしたとされる。氏名・住所に加えて旅程という文脈情報が含まれるため、実在する予約や搭乗予定を装った標的型フィッシングに悪用される恐れがある。ピーチ側の運航や予約業務への影響は不明。</p>
+</section><section class="article-section">
+  <h2>AI との関係</h2>
+  <p>AIの関与は確認されていない。ただし旅程や氏名・住所がセットで流出した点は、生成AIで自然な文面の標的型メールを大量生成する際の材料になり得る。対策としては、メール配信委託先に渡すデータの最小化と、送信ドメイン認証（DMARC等）の徹底によるなりすまし送信の抑止が実務上の要点となる。</p>
+</section>
+  
+  <section class="sources">
+    <h2>出典</h2>
+    <ul><li>
+  <a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE1YYVNCSUlXTndHdEpFSElwY3JaOTdENWMwaDdOS1Vjcmg3T29BZ1pWNUxYRThwOHpXd2Rsdi1fUE5EQUpJUVFQTmRpaEdzWVlWUEJEVEFzQ2RGdGp3blhtMVhUeHZTM3JueHhWYXhISWg3UVR1MzAyX09ic0pIODA?oc=5" target="_blank" rel="noopener">ピーチで899万件の個人情報漏えい 氏名・住所・旅程まで、原因は委託先のメール配信（ビジネス＋IT）</a>
+  <span class="src-meta">Yahoo!ニュース ・ 2026年11月21日</span>
+</li><li>
+  <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1Ia2c5WkFOWTdIZUgtTjNtaE9Ea19pTFNBbkRlYUg3bXNxWTVKN3liNTB2MmI3a0V5Nk5RdHh4OEp3dEN5MDBtM2dtM1pTb1pFd1BJ?oc=5" target="_blank" rel="noopener">ピーチで899万件の個人情報漏えい 氏名・住所・旅程まで、原因は委託先のメール配信</a>
+  <span class="src-meta">ビジネス+IT ・ 2026年11月21日</span>
+</li><li>
+  <a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTE5MRzRxeGlDSUVIM2dYcGVJd1FsVWpySWZOTkNVNW9Ma2J0QVNCRGhYWWxnQjNXeDJZVVA2ejBqLWJyRHhtWDI4QTQzTk1qQW5GUWRrNENPQQ?oc=5" target="_blank" rel="noopener">ピーチ、ユミルリンクへの不正アクセスで約899万件の個人情報が漏えい</a>
+  <span class="src-meta">TRAICY（トライシー） ・ 2026年11月20日</span>
+</li><li>
+  <a href="https://scan.netsecurity.ne.jp/article/2026/11/20/56860.html" target="_blank" rel="noopener">ユミルリンクのメール配信サービスに不正アクセス、延べ4,786万4,147件の配信先情報が漏えい</a>
+  <span class="src-meta">ScanNetSecurity ・ 2026年11月20日</span>
+</li></ul>
+  </section>
+  <nav class="article-nav"><a class="nav-link" href="2026-11-20-gss-government-breach.html"><span>新しい記事</span>政府の情報システム基盤GSSに不正アクセス、内部資料漏えいの可能性</a><a class="nav-link" href="2026-11-20-vmware-vcenter-zero-day-apt.html"><span>古い記事</span>VMware vCenterにCVSS 9.8の認証バイパス脆弱性、中国系APTがゼロデイで悪用</a></nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-col">
+      <p class="footer-title">このサイトについて</p>
+      <p>国内外の報道から、社会的影響の大きいセキュリティ事故と重大な脆弱性だけを選び、原因・影響・AIとの関係を整理して記録しています。記事本文は AI による要約・編集を含みます。正確な情報は各出典をご確認ください。</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">アーカイブ</p>
+      <p><a href="../index.html">記事一覧</a> ／ <a href="https://github.com/HiroshiOkada/security-incident-news" target="_blank" rel="noopener">GitHub</a></p>
+      <p class="footer-meta">最終生成 2026-11-22 07:36 JST ／ 最終選定 2026-11-22 07:36 JST</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
