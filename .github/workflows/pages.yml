@@ -63,11 +63,36 @@ jobs:
         with:
           path: _site
 
+      # デプロイは artifact のメタデータ反映待ちで一時的に失敗することがある
+      # （"No artifacts named github-pages" / "Fetching artifact metadata failed"）。
+      # 待機を挟んで最大 3 回まで試す。
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
         continue-on-error: true
 
-      - name: Retry deploy once
+      - name: Wait before retry (1)
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 45
+
+      - name: Retry deploy (1)
+        id: deployment_retry1
         if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v5
+        continue-on-error: true
+
+      - name: Wait before retry (2)
+        if: steps.deployment.outcome == 'failure' && steps.deployment_retry1.outcome == 'failure'
+        run: sleep 90
+
+      - name: Retry deploy (2)
+        id: deployment_retry2
+        if: steps.deployment.outcome == 'failure' && steps.deployment_retry1.outcome == 'failure'
+        uses: actions/deploy-pages@v5
+        continue-on-error: true
+
+      - name: Fail if all deploy attempts failed
+        if: steps.deployment.outcome == 'failure' && steps.deployment_retry1.outcome == 'failure' && steps.deployment_retry2.outcome == 'failure'
+        run: |
+          echo "::error::Pages へのデプロイが 3 回とも失敗しました。"
+          exit 1
