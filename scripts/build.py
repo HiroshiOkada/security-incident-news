@@ -80,7 +80,7 @@ def masthead(root: str = "") -> str:
       </a>
     </div>
     <h1><a href="{root}index.html">重大セキュリティ事故の記録</a></h1>
-    <p class="tagline">国内外の大規模な情報漏えいと重大な脆弱性を、<br class="br-sp">一日一件だけ選んで記録します。</p>
+    <p class="tagline">国内外の大規模な情報漏えいと重大な脆弱性から、<br class="br-sp">本当に影響の大きい事故だけを選んで記録します。</p>
   </div>
 </header>"""
 
