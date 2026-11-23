@@ -1,6 +1,96 @@
 {
- "generated_at": "2026-11-23T07:37:25+09:00",
+ "generated_at": "2026-11-24T07:38:16+09:00",
  "incidents": [
+  {
+   "id": "2026-11-24-kepco-data-breach-1-5m",
+   "event_date": "2026-11-24",
+   "category": "breach",
+   "region": "world",
+   "severity": "high",
+   "title": "韓国電力公社KEPCOに不正アクセス、顧客・従業員・委託先の150万人分情報が流出",
+   "lead": "韓国の電力大手、韓国電力公社（KEPCO）は、社内ネットワークへの不正アクセスを受け、顧客・従業員・委託先の情報を含む2つのシステムが侵害されたと確認した。影響を受けるのは約150万人とされる。国の基幹インフラを担う事業者での内部侵入であり、電力供給システムへの影響の有無が焦点となっている。",
+   "cause": "攻撃者がKEPCOの内部ネットワークに侵入し、顧客・従業員・協力会社のデータを保持する2つのシステムにアクセスしたとされる。初期侵入の経路（VPN機器、委託先経由、認証情報の窃取など）は現時点で公表されておらず不明。侵害の期間や横展開の範囲も明らかにされていない。",
+   "impact": "約150万人分の顧客・従業員・委託先情報が影響を受けたとされ、氏名や連絡先など個人を特定できる情報の範囲は不明。発電・送配電などの制御系システムへの影響については確認されていないが、内部ネットワーク侵害であることから、重要インフラ事業者として復旧・調査コストと監督当局からの説明責任が生じる。",
+   "ai_angle": "AIの関与は確認されていない。ただし委託先を含む連絡先・組織情報がまとめて窃取された場合、生成AIで自然文の標的型メールを量産する際の「宛先リスト」として悪用され得るため、漏えい範囲の特定と委託先への注意喚起を通常の顧客通知より優先すべきである。",
+   "tags": [
+    "情報漏えい",
+    "重要インフラ",
+    "電力",
+    "韓国"
+   ],
+   "keywords": [
+    "KEPCO",
+    "韓国電力公社",
+    "Korea Electric Power Corporation",
+    "1.5 million",
+    "重要インフラ",
+    "critical infrastructure",
+    "データ侵害"
+   ],
+   "status": "ongoing",
+   "sources": [
+    {
+     "title": "South Korea’s power giant KEPCO confirms data breach impacting 1.5 million",
+     "url": "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/",
+     "publisher": "BleepingComputer",
+     "published": "2026-11-24"
+    }
+   ],
+   "timeline": [],
+   "created_at": "2026-11-24T07:36:12+09:00",
+   "updated_at": "2026-11-24T07:36:12+09:00"
+  },
+  {
+   "id": "2026-11-24-cisco-expressway-cve-2026-76466",
+   "event_date": "2026-11-24",
+   "category": "vulnerability",
+   "region": "world",
+   "severity": "high",
+   "title": "シスコExpresswayの重大脆弱性CVE-2026-76466、実環境で悪用され内部ネットワーク侵入に利用",
+   "lead": "シスコのエッジ通信機器「Expressway」に存在する重大な脆弱性CVE-2026-76466が、実際の攻撃で悪用されていることが確認された。米CISAは既知の悪用脆弱性（KEV）カタログに追加し、連邦機関に月曜日までの修正を求めた。攻撃者はこの脆弱性を足がかりに内部ネットワークへの侵入を試みているとされる。",
+   "cause": "Expresswayのリモートからの攻撃可能な脆弱性で、悪用に認証を要するかなど詳細な技術条件は公表資料では明らかでない。VPNや遠隔会議の境界に置かれる機器であるため、外部公開されたエッジが初期侵入点として狙われたとみられる。修正プログラムは提供済みだが、未適用の機器が攻撃対象になっている。",
+   "impact": "Expresswayは企業の遠隔通信・VPN境界で広く使われており、侵害されると内部ネットワークへの足場を許す。CISAが連邦機関に期限付きの修正を指示したことから、政府系を含む多数の組織が影響範囲に入る可能性がある。日本国内の導入組織数や被害件数は不明。",
+   "ai_angle": "AIの関与は確認されていない。エッジ機器の脆弱性は公開直後から自動スキャンで狙われるため、KEV登録から修正完了までの猶予を前提に置かず、外部公開面の資産台帳と緊急遮断（暫定ルールでのブロック）を自動化された手順として用意しておくことが実務上の要点となる。",
+   "tags": [
+    "脆弱性",
+    "ゼロデイ",
+    "悪用確認",
+    "CISA KEV"
+   ],
+   "keywords": [
+    "Cisco Expressway",
+    "CVE-2026-76466",
+    "CISA",
+    "KEV",
+    "リモートコード実行",
+    "RCE",
+    "シスコ"
+   ],
+   "status": "ongoing",
+   "sources": [
+    {
+     "title": "CISA flags critical Cisco RCE flaw as actively exploited in attacks",
+     "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-critical-cisco-expressway-rce-flaw-as-actively-exploited/",
+     "publisher": "BleepingComputer",
+     "published": "2026-11-23"
+    },
+    {
+     "title": "SAP NetWeaver, Cisco Expressway Flaws Exploited in Attacks",
+     "url": "https://www.securityweek.com/sap-netweaver-cisco-expressway-flaws-exploited-in-attacks/",
+     "publisher": "SecurityWeek",
+     "published": "2026-11-23"
+    },
+    {
+     "title": "Cisco Expressway vulnerability exploited to breach internal networks (CVE-2026-76466)",
+     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxON3RIeHRvY1BsWXpVRVJ3Q1Y4N3VkaHFhUnlLMjZjbFliWWV1TlJ3V29zMjl0Mnd1OWF6ODJ2aERWV3VIaUFWTmFSbDdMS1paUlNwcFdQNmNubFNUczFFTlhSaW5IekV3VzhxVEJwLVNEZHdPTU9kWnhJc3d3b0FXUUdVbzk2clFTeXc2dFI3U3BTYmw2REVXS3VyTlZjMV9L?oc=5",
+     "publisher": "Help Net Security",
+     "published": "2026-11-23"
+    }
+   ],
+   "timeline": [],
+   "created_at": "2026-11-24T07:36:12+09:00",
+   "updated_at": "2026-11-24T07:36:12+09:00"
+  },
   {
    "id": "2026-11-22-fbi-database-hack",
    "event_date": "2026-11-22",
@@ -41,9 +131,17 @@
      "published": "2026-11-23"
     }
    ],
-   "timeline": [],
+   "timeline": [
+    {
+     "date": "2026-11-24",
+     "note": "FBIの全国犯罪司法データベース（NCIC）を巡り、同局が2件目のデータ侵害に直面していると報じられた。同データベースは犯罪者や逃亡者、行方不明者の情報を含み、捜査が続いている。",
+     "url": "https://therecord.media/fbi-cyberattack-data-breach",
+     "publisher": "The Record",
+     "title": "FBI reportedly facing second data breach involving National Crime Information Center"
+    }
+   ],
    "created_at": "2026-11-23T07:36:01+09:00",
-   "updated_at": "2026-11-23T07:36:01+09:00"
+   "updated_at": "2026-11-24T07:36:23+09:00"
   },
   {
    "id": "2026-11-22-tower-records-breach",
@@ -104,9 +202,17 @@
      "published": "2026-11-22"
     }
    ],
-   "timeline": [],
+   "timeline": [
+    {
+     "date": "2026-11-23",
+     "note": "タワーレコードの不正アクセスで、流出した個人情報の一部に氏名や住所が含まれる一方、クレジットカード情報は流出していないと報じられた。",
+     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBTVXNGZWZrT2g3TXlQbXFMTFFMNm5Fc1FjRmU2ZzY5a082NFZJa3p6bU95RDY2dFMxU0xROVdsVTRsSG12Z2pDSGlEejcxa00zWGJOZ0tOS0taZlZOVk9kSm5VSFZrQnJUNnpQRnN3?oc=5",
+     "publisher": "au Webポータル",
+     "title": "タワーレコードに不正アクセス 個人情報1100万件流出か 一部に名前や住所など含むも、クレカ情報は流出せず"
+    }
+   ],
    "created_at": "2026-11-23T07:36:01+09:00",
-   "updated_at": "2026-11-23T07:36:01+09:00"
+   "updated_at": "2026-11-24T07:36:34+09:00"
   },
   {
    "id": "2026-11-20-zozotown-breach-15-million",
@@ -170,10 +276,24 @@
      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQTnpjcmVVMFZ3R2FrYkVZZEhjc1RvS3RmbWtjUlJEWHJBQ1dXSzB2UWVVejFXRFlpenBCMXZIOUtMaWgyX0RDcjlYd1JWdFVoajJncGxtNWtmcGZBb1FpVnhmS2xLb21fWC1XNTVRUDA0aXY0ajZqYmZhX0RaeEYxemVULS1laXVER1JYb293VUVvcDJwaVJMTTg3WlZ5OWljNmIwcVlB?oc=5",
      "publisher": "合同会社ロケットボーイズ",
      "title": "三井住友銀行、最大約1,400万件が情報漏えい プレイド「KARTE」への不正アクセスによるサイバー攻撃で"
+    },
+    {
+     "date": "2026-11-24",
+     "note": "プレイドはKARTEへの不正アクセスによるサイバー攻撃で、最終20億円の赤字予想を発表した。",
+     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOSmJva1RvWWdwZjAtSnlIdXhCaW10SVhCLThZT2U3Q2FSODFDcDIzenNiXzlkTmFCSlFpRUZweU1jWV9OaFhqclZnc1lpYUhnWHh4N3BPY3haNFVvT0RQLTRTOU5uelJtOVJrUU9PWlJveG9UUTE1TjNFSGdBeDVzTkdiSl9ma3kweHVtX0VuU2twMzh1VldrZ0szblpLeXdrYjljUFJoYlYxaVJqNlE?oc=5",
+     "publisher": "合同会社ロケットボーイズ",
+     "title": "プレイド、KARTEへの不正アクセスによるサイバー攻撃で最終20億円の赤字予想|セキュリティニュースのセキュリティ対策Lab"
+    },
+    {
+     "date": "2026-11-24",
+     "note": "キヤノンマーケティングジャパンが、本件不正アクセスにより約366万件の情報漏えいのおそれを発表した。",
+     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNVkY4X1ZYeU04cmFyT2p4LTh2MzNpTHV4ck91VFVFc1dzS09xMGtsbGxPYnZVMnBaei1mbFJFb0ZMOTNHNWNRRTk1dUprWlFFR0VCTDZlUFZRd2REYWpRa1RPZ3hBSDI0WTNFWXZCWl9kaWtLd1JnamZ5MkloUkx4ajhvMXhNZFRrbkFLZDlvS09vSDFZNFp4UGxPYw?oc=5",
+     "publisher": "合同会社ロケットボーイズ",
+     "title": "キヤノンマーケティングジャパン、約366万件の情報漏洩の恐れ、プレイド「KARTE」への不正アクセスによるサイバー攻撃で"
     }
    ],
    "created_at": "2026-11-21T07:37:12+09:00",
-   "updated_at": "2026-11-23T07:36:27+09:00"
+   "updated_at": "2026-11-24T07:37:00+09:00"
   },
   {
    "id": "2026-11-20-gss-government-breach",
@@ -509,10 +629,24 @@
      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQTnpjcmVVMFZ3R2FrYkVZZEhjc1RvS3RmbWtjUlJEWHJBQ1dXSzB2UWVVejFXRFlpenBCMXZIOUtMaWgyX0RDcjlYd1JWdFVoajJncGxtNWtmcGZBb1FpVnhmS2xLb21fWC1XNTVRUDA0aXY0ajZqYmZhX0RaeEYxemVULS1laXVER1JYb293VUVvcDJwaVJMTTg3WlZ5OWljNmIwcVlB?oc=5",
      "publisher": "合同会社ロケットボーイズ",
      "title": "三井住友銀行、最大約1,400万件が情報漏えい プレイド「KARTE」への不正アクセスによるサイバー攻撃で"
+    },
+    {
+     "date": "2026-11-24",
+     "note": "プレイドはKARTEへの不正アクセスによるサイバー攻撃で最終20億円の赤字予想を発表した。",
+     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOSmJva1RvWWdwZjAtSnlIdXhCaW10SVhCLThZT2U3Q2FSODFDcDIzenNiXzlkTmFCSlFpRUZweU1jWV9OaFhqclZnc1lpYUhnWHh4N3BPY3haNFVvT0RQLTRTOU5uelJtOVJrUU9PWlJveG9UUTE1TjNFSGdBeDVzTkdiSl9ma3kweHVtX0VuU2twMzh1VldrZ0szblpLeXdrYjljUFJoYlYxaVJqNlE?oc=5",
+     "publisher": "合同会社ロケットボーイズ",
+     "title": "プレイド、KARTEへの不正アクセスによるサイバー攻撃で最終20億円の赤字予想|セキュリティニュースのセキュリティ対策Lab"
+    },
+    {
+     "date": "2026-11-24",
+     "note": "キヤノンマーケティングジャパンが約366万件の情報漏洩の恐れを発表、プレイド「KARTE」への不正アクセスが原因とみられる。",
+     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNVkY4X1ZYeU04cmFyT2p4LTh2MzNpTHV4ck91VFVFc1dzS09xMGtsbGxPYnZVMnBaei1mbFJFb0ZMOTNHNWNRRTk1dUprWlFFR0VCTDZlUFZRd2REYWpRa1RPZ3hBSDI0WTNFWXZCWl9kaWtLd1JnamZ5MkloUkx4ajhvMXhNZFRrbkFLZDlvS09vSDFZNFp4UGxPYw?oc=5",
+     "publisher": "合同会社ロケットボーイズ",
+     "title": "キヤノンマーケティングジャパン、約366万件の情報漏洩の恐れ、プレイド「KARTE」への不正アクセスによるサイバー攻撃で"
     }
    ],
    "created_at": "2026-11-19T00:13:44+09:00",
-   "updated_at": "2026-11-22T07:36:14+09:00"
+   "updated_at": "2026-11-24T07:37:55+09:00"
   },
   {
    "id": "2026-11-18-puppet-enterprise-rce-cve-2026-115731",
@@ -587,7 +721,7 @@
     "エネルギー",
     "内部システム"
    ],
-   "status": "ongoing",
+   "status": "resolved",
    "sources": [
     {
      "title": "Cyberattack hits Norwegian energy giant Equinor, disrupting internal services",
@@ -596,9 +730,17 @@
      "published": "2026-11-18"
     }
    ],
-   "timeline": [],
+   "timeline": [
+    {
+     "date": "2026-11-24",
+     "note": "ノルウェーのサイバー当局は、EquinorとSkagerak Energiへの攻撃がMicrosoftのクラウド脆弱性を悪用したものだと明らかにした。攻撃者は同脆弱性を用いて機密認証情報の窃取を狙ったという。",
+     "url": "https://therecord.media/norway-microsoft-cyberattack-equinor",
+     "publisher": "The Record",
+     "title": "Norway says hackers exploited Microsoft security flaw to attack energy firms Equinor, Skagerak Energi"
+    }
+   ],
    "created_at": "2026-11-19T00:13:44+09:00",
-   "updated_at": "2026-11-19T00:13:44+09:00"
+   "updated_at": "2026-11-24T07:38:01+09:00"
   },
   {
    "id": "2026-11-17-java4shell-cve-2026-114938",
@@ -682,10 +824,17 @@
      "url": "https://www.security-next.com/193112",
      "publisher": "Security NEXT",
      "title": "「OpenJDK」に脆弱性、PoCも - 修正版が公開"
+    },
+    {
+     "date": "2026-11-19",
+     "note": "日本のIPAも国内組織向けにJava4Shellの注意喚起を公開し、修正プログラムを直ちに適用できない場合の緩和策を示した。",
+     "url": "https://www.itmedia.co.jp/enterprise/articles/2611/19/news055.html",
+     "publisher": "ITmedia エンタープライズ",
+     "title": "認証なしでリモートコード実行の恐れ、Javaに脆弱性「Java4Shell」 JiraやJenkinsで攻撃実証の報告も"
     }
    ],
    "created_at": "2026-11-18T07:36:50+09:00",
-   "updated_at": "2026-11-20T07:36:42+09:00"
+   "updated_at": "2026-11-24T07:38:05+09:00"
   },
   {
    "id": "2026-11-17-rakuten-securities-breach",
