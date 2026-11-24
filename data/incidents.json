@@ -1,6 +1,92 @@
 {
- "generated_at": "2026-11-24T07:38:16+09:00",
+ "generated_at": "2026-11-25T07:38:45+09:00",
  "incidents": [
+  {
+   "id": "2026-11-25-keio-ransomware-data-breach",
+   "event_date": "2026-11-25",
+   "category": "breach",
+   "region": "jp",
+   "severity": "critical",
+   "title": "京王、1100万人超の個人情報漏えいか 9月のランサムウェア被害でクレカ番号も流出",
+   "lead": "京王電鉄は25日、9月に発生したランサムウェア攻撃の影響で、グループ全体で1100万人を超える個人情報が流出した可能性があると発表した。一部のクレジットカード番号や本人確認書類も含まれており、被害は過去最大級となる見通し。",
+   "cause": "2026年9月に京王グループのシステムがランサムウェア攻撃を受け、攻撃者がサーバーを暗号化するとともにデータを窃取。内部調査の結果、顧客・従業員の氏名、住所、電話番号、クレジットカード番号、運転免許証などの本人確認書類の画像が含まれるデータベースにアクセスされていたことが判明した。",
+   "impact": "京王電鉄、京王バス、京王百貨店などグループ各社の顧客・利用者・従業員の個人情報が対象。流出件数は1100万人超に上り、クレジットカード情報の悪用リスクや、本人確認書類の流出によるなりすまし被害が懸念される。同社は該当する可能性のある顧客に個別通知を開始した。",
+   "ai_angle": "AIの関与は確認されていない。ただし、ランサムウェア攻撃の検知・分析においては、AIによる異常行動の早期発見が有効であり、本件でもAIベースのEDR（Endpoint Detection and Response）を導入していれば、暗号化前の段階でデータ流出を防げた可能性がある。",
+   "tags": [
+    "ランサムウェア",
+    "情報漏えい",
+    "交通インフラ",
+    "クレジットカード情報"
+   ],
+   "keywords": [
+    "京王電鉄",
+    "京王グループ",
+    "ランサムウェア",
+    "個人情報漏えい",
+    "クレジットカード"
+   ],
+   "status": "ongoing",
+   "sources": [
+    {
+     "title": "京王電鉄 1100万人超の情報漏えいか 本人確認書類クレカ番号も",
+     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1ZcFNNRkFONW83bHFVb1ctbENMUG5xZ21wTWtXR29qOThHa2NKNVI3OFVWa2w3bnBlRWRhY1VGOUwtcTdwaEhkVWlJOUl4SXhWTVMyNjJLLVBZLW8zcUJF?oc=5",
+     "publisher": "NHKニュース",
+     "published": "2026-11-24"
+    },
+    {
+     "title": "京王グループ、1000万人余りの個人情報漏えいか ランサムウエア攻撃で（2026年11月24日掲載）",
+     "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBhMl93ZE1LandXV1hqbUN5YndmZUVHUWJXR2RxSnprd2hxREhaejhuckRYYjZySmlNcHNiYWNSeW9OWTF6TGZYUlVNVk1xUktUX1lXdnYxZEhnSWhGVGRjMVFFVHR4dXVlVnYxcE5adEFQRzNiUjMyUm02UW4?oc=5",
+     "publisher": "日テレNEWS NNN",
+     "published": "2026-11-24"
+    },
+    {
+     "title": "京王、1100万人超の個人情報漏えいか 一部クレカ番号なども 9月のランサム被害で",
+     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFA3WnJGV3BiRExtUHVxQXBObDNLdzhhY2l2Ym5yYWt2Q2RVa1h4cmhvdGR3TzZldkY2ZXRtSF9TamJDdXJqbzd4M1VSVU45MjZkU1RTb1NaaWFvNERTVFFfcEV2eHlNRTFjV0E?oc=5",
+     "publisher": "ITmedia",
+     "published": "2026-11-25"
+    }
+   ],
+   "timeline": [],
+   "created_at": "2026-11-25T07:37:37+09:00",
+   "updated_at": "2026-11-25T07:37:37+09:00"
+  },
+  {
+   "id": "2026-11-24-mcdonalds-japan-data-breach",
+   "event_date": "2026-11-24",
+   "category": "breach",
+   "region": "jp",
+   "severity": "high",
+   "title": "マクドナルド日本法人、公式アプリのデータベース侵害で顧客位置情報が流出",
+   "lead": "日本マクドナルドは24日、公式スマートフォンアプリのデータベースが不正アクセスを受け、顧客の位置情報を含む個人情報が流出したと発表した。同社はアプリの一部機能を停止し、調査を進めている。",
+   "cause": "攻撃者が日本マクドナルドの公式アプリのバックエンドデータベースに不正アクセスし、顧客情報を窃取した。侵入経路や手法は現在調査中だが、同社は外部セキュリティ専門家と連携して原因究明にあたっている。",
+   "impact": "流出した情報には、氏名、メールアドレス、電話番号に加え、アプリ利用時の位置情報（GPSデータ）が含まれる。位置情報は来店履歴や行動パターンの分析に悪用されるリスクがある。被害規模は明らかにされていないが、日本マクドナルドのアプリは数百万人が利用しており、影響は広範囲に及ぶ可能性がある。同社は該当するユーザーに通知を開始した。",
+   "ai_angle": "AIの関与は確認されていない。位置情報の流出は、AIによる行動パターン分析やターゲティング広告に悪用されるリスクが高く、プライバシー侵害の深刻度が増す。企業は位置情報のようなセンシティブデータを扱う場合、AIによる異常検知を導入し、データベースへの不審なアクセスをリアルタイムで監視する必要がある。",
+   "tags": [
+    "情報漏えい",
+    "位置情報",
+    "アプリ",
+    "飲食"
+   ],
+   "keywords": [
+    "マクドナルド",
+    "日本マクドナルド",
+    "公式アプリ",
+    "位置情報",
+    "データベース侵害"
+   ],
+   "status": "ongoing",
+   "sources": [
+    {
+     "title": "McDonald's Japan data breach exposes customer location information",
+     "url": "https://www.bleepingcomputer.com/news/security/mcdonalds-japan-data-breach-exposes-customer-location-information/",
+     "publisher": "BleepingComputer",
+     "published": "2026-11-24"
+    }
+   ],
+   "timeline": [],
+   "created_at": "2026-11-25T07:37:37+09:00",
+   "updated_at": "2026-11-25T07:37:37+09:00"
+  },
   {
    "id": "2026-11-24-kepco-data-breach-1-5m",
    "event_date": "2026-11-24",
@@ -36,9 +122,17 @@
      "published": "2026-11-24"
     }
    ],
-   "timeline": [],
+   "timeline": [
+    {
+     "date": "2026-11-24",
+     "note": "KEPCOの情報流出は、顧客ポータルとサプライヤー管理プラットフォームから個人情報が窃取されたもので、影響人数は約150万人と確定した。",
+     "url": "https://www.securityweek.com/1-5-million-impacted-by-data-breach-at-south-korean-electric-company-kepco/",
+     "publisher": "SecurityWeek",
+     "title": "1.5 Million Impacted by Data Breach at South Korean Electric Company KEPCO"
+    }
+   ],
    "created_at": "2026-11-24T07:36:12+09:00",
-   "updated_at": "2026-11-24T07:36:12+09:00"
+   "updated_at": "2026-11-25T07:37:43+09:00"
   },
   {
    "id": "2026-11-24-cisco-expressway-cve-2026-76466",
@@ -209,10 +303,17 @@
      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBTVXNGZWZrT2g3TXlQbXFMTFFMNm5Fc1FjRmU2ZzY5a082NFZJa3p6bU95RDY2dFMxU0xROVdsVTRsSG12Z2pDSGlEejcxa00zWGJOZ0tOS0taZlZOVk9kSm5VSFZrQnJUNnpQRnN3?oc=5",
      "publisher": "au Webポータル",
      "title": "タワーレコードに不正アクセス 個人情報1100万件流出か 一部に名前や住所など含むも、クレカ情報は流出せず"
+    },
+    {
+     "date": "2026-11-24",
+     "note": "タワーレコードの不正アクセスで、流出した個人情報は約1021万件に確定し、うち約77万件には住所も含まれていたことが判明した。",
+     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9aR2V4RDZhVGVablhXT296LXVKd2phVmVoTTE2NzgxSVRfbDhhUzVWMVQtaWxMTWFQSG9IZlJmMjc1emlfblJmNVRWbGJPVmh1ZENZV2RNbzJQNG13Ml9fYWZBamI?oc=5",
+     "publisher": "Impress Watch",
+     "title": "タワレコに不正アクセスで1021万件漏えい 77万件は住所も"
     }
    ],
    "created_at": "2026-11-23T07:36:01+09:00",
-   "updated_at": "2026-11-24T07:36:34+09:00"
+   "updated_at": "2026-11-25T07:37:50+09:00"
   },
   {
    "id": "2026-11-20-zozotown-breach-15-million",
@@ -459,10 +560,17 @@
      "url": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog",
      "publisher": "CISA Advisories",
      "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog"
+    },
+    {
+     "date": "2026-11-24",
+     "note": "ブロードコムがvCenterに新たなCVSS 9.8の認証バイパス脆弱性CVE-2026-123903の修正パッチを公開。前回のCVE-2026-123890とは別の欠陥で、悪用は未確認。",
+     "url": "https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html",
+     "publisher": "The Hacker News",
+     "title": "VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw After Zero-Day Exploitation"
     }
    ],
    "created_at": "2026-11-20T07:35:57+09:00",
-   "updated_at": "2026-11-22T07:36:03+09:00"
+   "updated_at": "2026-11-25T07:38:21+09:00"
   },
   {
    "id": "2026-11-19-nginx-cve-2026-123007",
@@ -893,6 +1001,18 @@
      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9KY2NkbzNLV1BWdjNvMDU1azgybFAxNHYwcDQ1VzF0X2NzVjVtX1lHR2thazdHQU82SFZzZXZKcFQxUWJ2LWVBSXBJX0pIcDhlWEN0Vjhla0k3bW10NUprWjFSbnAtYURIQnc?oc=5",
      "publisher": "ITmedia",
      "published": "2026-11-17"
+    },
+    {
+     "title": "楽天証券情報漏えいの詳細判明 全体件数は約441万件 | NHKニュース | サイバー攻撃、企業・経営、ＡＩ・ネット・ＩＴ",
+     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE43Ujl3Tk1vLXJNTlBRS3J3NTlqVkttcURDYzBvYzJJZVA2S1Mwb2FwSTVGTXRkZW9SQXJxX3lWd2ROMUVjTjVBSk1ISFRqOHBhYk14cmtsdGNDZEJZR2RN?oc=5",
+     "publisher": "NHKニュース",
+     "published": "2026-11-24"
+    },
+    {
+     "title": "楽天証券、住所・氏名等の漏えいは441万件 口座未開設者も119万件（Impress Watch）",
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5Xb1I3VXVmVWVKWEdNOXU3ZlVDUnF0TFRFVm4zTm9lNEY4VGlaQ1Jyc3gtSWdGWndodks0R3htYXZRVWJCcUV2OEVTTk43SGtyb0VPWklMaGpjVjVEaTRKclhwNnYtSW96c214SkpQcWx2dzBVNkRPcUN6eFpDNmc?oc=5",
+     "publisher": "Yahoo!ニュース",
+     "published": "2026-11-24"
     }
    ],
    "timeline": [
@@ -947,7 +1067,7 @@
     }
    ],
    "created_at": "2026-11-17T19:38:38+09:00",
-   "updated_at": "2026-11-23T07:37:15+09:00"
+   "updated_at": "2026-11-25T07:37:37+09:00"
   },
   {
    "id": "2026-11-17-jins-data-breach",
@@ -1209,10 +1329,24 @@
      "url": "https://thehackernews.com/2026/11/everything-is-web-application-including.html",
      "publisher": "The Hacker News",
      "title": "Everything Is a Web Application, Including Your Firewall"
+    },
+    {
+     "date": "2026-11-24",
+     "note": "この攻撃は99個のIPアドレスから複数業種・複数国の組織に対して行われ、AI支援型キャンペーンと報じられた。",
+     "url": "https://www.securityweek.com/check-point-security-management-servers-hacked-in-ai-assisted-campaign/",
+     "publisher": "SecurityWeek",
+     "title": "Check Point Security Management Servers Hacked in AI-Assisted Campaign"
+    },
+    {
+     "date": "2026-11-25",
+     "note": "Check Pointの管理サーバーが複数の脆弱性を悪用され、22組織で計2ダース（24台）が侵害された。攻撃キャンペーンは継続中とされる。",
+     "url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-check-point-servers-in-22-organizations/",
+     "publisher": "BleepingComputer",
+     "title": "Hackers compromise Check Point Servers in 22 organizations"
     }
    ],
    "created_at": "2026-11-17T19:35:54+09:00",
-   "updated_at": "2026-11-20T07:37:01+09:00"
+   "updated_at": "2026-11-25T07:38:42+09:00"
   },
   {
    "id": "2026-11-11-apache-http2-cve-2026-119618",
