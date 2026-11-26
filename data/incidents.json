@@ -1,6 +1,67 @@
 {
- "generated_at": "2026-11-26T07:36:16+09:00",
+ "generated_at": "2026-11-27T07:38:29+09:00",
  "incidents": [
+  {
+   "id": "2026-11-26-mext-breach-160k",
+   "event_date": "2026-11-26",
+   "category": "breach",
+   "region": "jp",
+   "severity": "high",
+   "title": "文部科学省の入札システムに不正アクセス、最大16万件の情報漏えいか",
+   "lead": "文部科学省が運用する入札関連システムに不正アクセスがあり、最大約16万件の情報が漏えいした可能性があることが26日、明らかになった。漏えいした情報には入札参加企業の名称や担当者情報などが含まれるとみられる。",
+   "cause": "文部科学省の入札システムへの不正アクセスが発生。侵入経路や手法は現在も調査中だが、同省は外部からの攻撃を受けたと発表している。",
+   "impact": "最大約16万件の情報が漏えいした可能性があり、入札参加企業の名称や担当者情報などが含まれる。現時点で二次被害の報告はないが、同省は関係企業への注意喚起を進めている。",
+   "ai_angle": "AIの関与は確認されていない。AI時代の実務への示唆として、政府調達システムのような重要インフラでは、AIによる異常検知を導入し、不正アクセスを早期に発見する体制が求められる。",
+   "tags": [
+    "不正アクセス",
+    "情報漏えい",
+    "政府機関",
+    "入札システム"
+   ],
+   "keywords": [
+    "文部科学省",
+    "MEXT",
+    "入札システム",
+    "不正アクセス",
+    "情報漏えい"
+   ],
+   "status": "ongoing",
+   "sources": [
+    {
+     "title": "文科省に不正アクセス、１６万件情報漏えいか",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5XNl9xQ0o4WTlZZm9MM0E3QzN3bVI4OUpWTVlQbTh1VWdJRmUyUm1QeUpXLXNlSzBTYTZ3Ti10dGxLZndRQThFMFdEY2tZaGFhWHJmNG5KQzAtWkxzNWNjTTZ4eGpQUG8?oc=5",
+     "publisher": "カナロコ",
+     "published": "2026-11-26"
+    },
+    {
+     "title": "【速報】文科省に不正アクセス、16万件情報漏えいか",
+     "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1FYXRjQ0ZmWlVoQjZkVkdXWmdKQjNrdE1XUmxNTU5uNmZGTTVDbVVEQTh2MnpTcWJqRVVPVk1ITjFpdU5yRmdGWmR5WQ?oc=5",
+     "publisher": "47NEWS",
+     "published": "2026-11-26"
+    },
+    {
+     "title": "文科省に不正アクセス、16万件情報漏えいか（共同通信）",
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE8xalhENVhGMjNreTFab3ZnbFF1STMzaUhqZk01VTVmX2VoN19wYVJYdmttbTU5QjdveGhNM2JUZU5ySTkwOHNoelU1UzR3alYyZGVIUHNtekx0Y0htRldza3ZEOXFjVWVIRTh4ZlRLbGVhN2UxYm5KNE1rdzY0OU0?oc=5",
+     "publisher": "Yahoo!ニュース",
+     "published": "2026-11-26"
+    },
+    {
+     "title": "文科省システムに不正アクセス 入札参加の企業名など漏洩の可能性 [情報漏洩・個人情報流出の最新ニュース]",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1VNEtueFBGcEFxMGFtcF9IN3BFU1RQd25oVWhGWVlxY3M5bHRkSGNuLTc3TDBwdzJKRkNkQlA1bGt5NnVWU3Iwc2tFY29DSVdDT25qemdVREpaMkNfalNZcEtwQ1B3eU0?oc=5",
+     "publisher": "朝日新聞",
+     "published": "2026-11-26"
+    },
+    {
+     "title": "文部科学省 入札システムに不正アクセス 情報漏えいの可能性",
+     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1aMGs3NXBVdm9lLXBHbUVHWHhqTTZUOWJRVDBjMmJMM2JGUjRpdXV1Vi13NjRBNV9ScHYxdTJxX2lJV1hITFZ1NzdBX3p3ajlGZEVWaXlDVHF5WXNRUDVZ?oc=5",
+     "publisher": "NHKニュース",
+     "published": "2026-11-26"
+    }
+   ],
+   "timeline": [],
+   "created_at": "2026-11-27T07:36:47+09:00",
+   "updated_at": "2026-11-27T07:36:47+09:00"
+  },
   {
    "id": "2026-11-25-keio-ransomware-data-breach",
    "event_date": "2026-11-25",
@@ -429,10 +490,24 @@
      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNVkY4X1ZYeU04cmFyT2p4LTh2MzNpTHV4ck91VFVFc1dzS09xMGtsbGxPYnZVMnBaei1mbFJFb0ZMOTNHNWNRRTk1dUprWlFFR0VCTDZlUFZRd2REYWpRa1RPZ3hBSDI0WTNFWXZCWl9kaWtLd1JnamZ5MkloUkx4ajhvMXhNZFRrbkFLZDlvS09vSDFZNFp4UGxPYw?oc=5",
      "publisher": "合同会社ロケットボーイズ",
      "title": "キヤノンマーケティングジャパン、約366万件の情報漏洩の恐れ、プレイド「KARTE」への不正アクセスによるサイバー攻撃で"
+    },
+    {
+     "date": "2026-11-27",
+     "note": "プレイド「KARTE」への不正アクセスで、ファンケル傘下のアテニアは最大66万3,481件の情報漏えいを公表。7年以上前に利用終了した顧客データが残存していた。",
+     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQamV0cXRXNUJoRkFtLUdzbWh1d2pXejFrRDhsQ1l6X2Z1U0JNWlFhQlBkTFVHa19oTm5NelN0cllTYlBVeTRKZ3JtQW5iYmV0b1NIWnppbG9Pank2OTVzUVVGVlZ1bTZ4RENPVWUyMkxkeDVOUGZpdVprcUp3dFJnZlc0SkZ6TTV1S0E4?oc=5",
+     "publisher": "合同会社ロケットボーイズ",
+     "title": "ファンケル 傘下のアテニア、最大66万3,481件の情報漏えい-プレイド KARTEへの不正アクセスで 7年以上前に利用終了した顧客データが残存|セキュリティニュースのセキュリティ対策Lab"
+    },
+    {
+     "date": "2026-11-27",
+     "note": "同じKARTE不正アクセスで、ピーチエアは最大約944万件の個人情報漏えいを公表。契約終了後も顧客データが残存していた。",
+     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSHdRR0xsLUFlcC12Wm9VUXBUWkpLTnlqa25zQTQ3ZDNQZElseWV1a3pHeTNRMF9GYVV4TWVsZDc4akh4SC1WRFNjOW5YY29mSTBMYmM4V2gwQjNrR2dBQ3BOSkM2MUp5cFhTdllrS3N1V21jYURnVlh3UEd5azVzc2ZBWVg2S21WS295YjBmaFRMVHh3Z1JheUhMVk1rcWc?oc=5",
+     "publisher": "合同会社ロケットボーイズ",
+     "title": "ピーチエア、最大約944万件の個人情報漏えい-プレイド「KARTE」のサイバー攻撃で契約終了後も顧客データが残存"
     }
    ],
    "created_at": "2026-11-21T07:37:12+09:00",
-   "updated_at": "2026-11-24T07:37:00+09:00"
+   "updated_at": "2026-11-27T07:37:04+09:00"
   },
   {
    "id": "2026-11-20-gss-government-breach",
@@ -539,9 +614,17 @@
      "published": "2026-11-20"
     }
    ],
-   "timeline": [],
+   "timeline": [
+    {
+     "date": "2026-11-27",
+     "note": "ピーチの漏えい件数は最大約944万件に修正され、原因はプレイド「KARTE」へのサイバー攻撃と判明。契約終了後も顧客データが残存していたという。",
+     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSHdRR0xsLUFlcC12Wm9VUXBUWkpLTnlqa25zQTQ3ZDNQZElseWV1a3pHeTNRMF9GYVV4TWVsZDc4akh4SC1WRFNjOW5YY29mSTBMYmM4V2gwQjNrR2dBQ3BOSkM2MUp5cFhTdllrS3N1V21jYURnVlh3UEd5azVzc2ZBWVg2S21WS295YjBmaFRMVHh3Z1JheUhMVk1rcWc?oc=5",
+     "publisher": "合同会社ロケットボーイズ",
+     "title": "ピーチエア、最大約944万件の個人情報漏えい-プレイド「KARTE」のサイバー攻撃で契約終了後も顧客データが残存"
+    }
+   ],
    "created_at": "2026-11-22T07:35:54+09:00",
-   "updated_at": "2026-11-22T07:35:54+09:00"
+   "updated_at": "2026-11-27T07:37:08+09:00"
   },
   {
    "id": "2026-11-20-vmware-vcenter-zero-day-apt",
@@ -612,10 +695,17 @@
      "url": "https://www.securityweek.com/vmware-updates-patch-critical-esx-vcenter-vulnerabilities/",
      "publisher": "SecurityWeek",
      "title": "VMware Updates Patch Critical ESX, vCenter Vulnerabilities"
+    },
+    {
+     "date": "2026-11-26",
+     "note": "ブロードコムは11月26日、vCenterの認証バイパス（CVE-2026-123903）を含む計23件の脆弱性を修正するパッチを公開した。",
+     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOc01aN2hBT1I4QUZMaTNBZUFZVHA5cG5lWEYzV1MxMzA5YVhUbTVFd201cXprQXhLTEVlQjc0OVdVeC1VXzdvOG9TN21IT0VKY1c1amphdTVScmcyMjlqbXBySldaZUNUNmF3MWxKeFV0cGFpcHdPdFlzQWkxbjB2VGdoNlNrU2JocVVMaFZKMFU3QjhBUm8xY0k4WVU1bjlDUWlGRHdvN2xKRUxGUmc?oc=5",
+     "publisher": "Field Effect",
+     "title": "VMware patches 23 flaws, including another critical vCenter authentication bypass"
     }
    ],
    "created_at": "2026-11-20T07:35:57+09:00",
-   "updated_at": "2026-11-26T07:35:44+09:00"
+   "updated_at": "2026-11-27T07:37:31+09:00"
   },
   {
    "id": "2026-11-19-nginx-cve-2026-123007",
@@ -684,10 +774,17 @@
      "url": "https://www.itmedia.co.jp/enterprise/articles/2611/20/news039.html",
      "publisher": "ITmedia エンタープライズ",
      "title": "nginxに深刻な脆弱性、遠隔からコードを実行される可能性も 「バージョン確認だけ」では不十分な理由"
+    },
+    {
+     "date": "2026-11-27",
+     "note": "NGINXの脆弱性「nginx2root」について、影響を受ける可能性のあるNGINXサービスが約1000万件に上ると報じられた。",
+     "url": "https://thehackernews.com/2026/11/threatsday-250-rogue-extensions-10m.html",
+     "publisher": "The Hacker News",
+     "title": "ThreatsDay: 10M NGINX Services at Risk, 250+ Malicious Extensions, AI Server Hijacking + 17 More Stories"
     }
    ],
    "created_at": "2026-11-19T07:37:15+09:00",
-   "updated_at": "2026-11-21T07:37:18+09:00"
+   "updated_at": "2026-11-27T07:37:34+09:00"
   },
   {
    "id": "2026-11-18-mufg-data-breach-8-million",
@@ -796,10 +893,24 @@
      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNVkY4X1ZYeU04cmFyT2p4LTh2MzNpTHV4ck91VFVFc1dzS09xMGtsbGxPYnZVMnBaei1mbFJFb0ZMOTNHNWNRRTk1dUprWlFFR0VCTDZlUFZRd2REYWpRa1RPZ3hBSDI0WTNFWXZCWl9kaWtLd1JnamZ5MkloUkx4ajhvMXhNZFRrbkFLZDlvS09vSDFZNFp4UGxPYw?oc=5",
      "publisher": "合同会社ロケットボーイズ",
      "title": "キヤノンマーケティングジャパン、約366万件の情報漏洩の恐れ、プレイド「KARTE」への不正アクセスによるサイバー攻撃で"
+    },
+    {
+     "date": "2026-11-27",
+     "note": "プレイド「KARTE」への不正アクセスで、ファンケル傘下のアテニアが最大66万3,481件の情報漏えいを確認。7年以上前に利用終了した顧客データが残存していた。",
+     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQamV0cXRXNUJoRkFtLUdzbWh1d2pXejFrRDhsQ1l6X2Z1U0JNWlFhQlBkTFVHa19oTm5NelN0cllTYlBVeTRKZ3JtQW5iYmV0b1NIWnppbG9Pank2OTVzUVVGVlZ1bTZ4RENPVWUyMkxkeDVOUGZpdVprcUp3dFJnZlc0SkZ6TTV1S0E4?oc=5",
+     "publisher": "合同会社ロケットボーイズ",
+     "title": "ファンケル 傘下のアテニア、最大66万3,481件の情報漏えい-プレイド KARTEへの不正アクセスで 7年以上前に利用終了した顧客データが残存|セキュリティニュースのセキュリティ対策Lab"
+    },
+    {
+     "date": "2026-11-27",
+     "note": "同じKARTEへの不正アクセスで、ピーチエアも最大約944万件の個人情報漏えいを確認。契約終了後も顧客データが残存していた。",
+     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSHdRR0xsLUFlcC12Wm9VUXBUWkpLTnlqa25zQTQ3ZDNQZElseWV1a3pHeTNRMF9GYVV4TWVsZDc4akh4SC1WRFNjOW5YY29mSTBMYmM4V2gwQjNrR2dBQ3BOSkM2MUp5cFhTdllrS3N1V21jYURnVlh3UEd5azVzc2ZBWVg2S21WS295YjBmaFRMVHh3Z1JheUhMVk1rcWc?oc=5",
+     "publisher": "合同会社ロケットボーイズ",
+     "title": "ピーチエア、最大約944万件の個人情報漏えい-プレイド「KARTE」のサイバー攻撃で契約終了後も顧客データが残存"
     }
    ],
    "created_at": "2026-11-19T00:13:44+09:00",
-   "updated_at": "2026-11-24T07:37:55+09:00"
+   "updated_at": "2026-11-27T07:37:49+09:00"
   },
   {
    "id": "2026-11-18-puppet-enterprise-rce-cve-2026-115731",
@@ -1174,10 +1285,24 @@
      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5XUFI4OFlpODVVV2tCZi1USDFpU3VObUxVRzA5c1dmZzZwQlBRbTgwdlRLYU41UWJNbTNtVTFNUDJ6NnVFaG5XVkpJLVZWNE5sZWJjbHpNalpUYndiNzM5Vk5aRnE?oc=5",
      "publisher": "Impress Watch",
      "title": "影響広がる「KARTE」情報漏えいの調査が完了 27年1月中旬再開目指す"
+    },
+    {
+     "date": "2026-11-27",
+     "note": "ファンケル傘下のアテニアでもKARTE関連の不正アクセスにより最大約66万件の情報漏えいが判明。契約終了後も顧客データが残存していた。",
+     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQamV0cXRXNUJoRkFtLUdzbWh1d2pXejFrRDhsQ1l6X2Z1U0JNWlFhQlBkTFVHa19oTm5NelN0cllTYlBVeTRKZ3JtQW5iYmV0b1NIWnppbG9Pank2OTVzUVVGVlZ1bTZ4RENPVWUyMkxkeDVOUGZpdVprcUp3dFJnZlc0SkZ6TTV1S0E4?oc=5",
+     "publisher": "合同会社ロケットボーイズ",
+     "title": "ファンケル 傘下のアテニア、最大66万3,481件の情報漏えい-プレイド KARTEへの不正アクセスで 7年以上前に利用終了した顧客データが残存|セキュリティニュースのセキュリティ対策Lab"
+    },
+    {
+     "date": "2026-11-27",
+     "note": "ピーチエアでもKARTEへのサイバー攻撃により最大約944万件の個人情報漏えいが判明。契約終了後も顧客データが残存していた。",
+     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSHdRR0xsLUFlcC12Wm9VUXBUWkpLTnlqa25zQTQ3ZDNQZElseWV1a3pHeTNRMF9GYVV4TWVsZDc4akh4SC1WRFNjOW5YY29mSTBMYmM4V2gwQjNrR2dBQ3BOSkM2MUp5cFhTdllrS3N1V21jYURnVlh3UEd5azVzc2ZBWVg2S21WS295YjBmaFRMVHh3Z1JheUhMVk1rcWc?oc=5",
+     "publisher": "合同会社ロケットボーイズ",
+     "title": "ピーチエア、最大約944万件の個人情報漏えい-プレイド「KARTE」のサイバー攻撃で契約終了後も顧客データが残存"
     }
    ],
    "created_at": "2026-11-17T19:40:52+09:00",
-   "updated_at": "2026-11-23T07:37:18+09:00"
+   "updated_at": "2026-11-27T07:38:20+09:00"
   },
   {
    "id": "2026-11-17-fugaku-unauthorized-access",
@@ -1395,10 +1520,17 @@
      "url": "https://www.securityweek.com/palo-alto-networks-patches-fragnesia-flaw-used-to-root-firewalls/",
      "publisher": "SecurityWeek",
      "title": "Palo Alto Networks Patches Fragnesia Flaw Used to Root Firewalls"
+    },
+    {
+     "date": "2026-11-26",
+     "note": "Palo Alto Networksは、PAN-OSのFragnesia（CVE-2026-46300）が実際の攻撃で悪用され、PHP2Shellと連鎖してインターネット公開の管理インターフェースを狙う攻撃を警告した。",
+     "url": "https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-fragnesia-flaw-exploited-in-pan-os-attacks/",
+     "publisher": "BleepingComputer",
+     "title": "Palo Alto Networks warns of Fragnesia flaw exploited in PAN-OS attacks"
     }
    ],
    "created_at": "2026-11-17T19:35:54+09:00",
-   "updated_at": "2026-11-26T07:36:15+09:00"
+   "updated_at": "2026-11-27T07:38:26+09:00"
   },
   {
    "id": "2026-11-11-apache-http2-cve-2026-119618",
