@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>独SAP、GitHub上の不審活動でインシデント確認 ソースコード改変の報道｜Security Incident Watch</title>
+<meta name="description" content="独SAPは、自社のIT環境とGitHub上で不審な活動を検知したとして、セキュリティインシデントを認めた。報道によれば、攻撃者は窃取した従業員のアクセストークンを使ってソースコードを複製・改変したとされ、同社は顧客保護のため緊急の対応を取ったという。">
+<meta property="og:title" content="独SAP、GitHub上の不審活動でインシデント確認 ソースコード改変の報道｜Security Incident Watch">
+<meta property="og:description" content="独SAPは、自社のIT環境とGitHub上で不審な活動を検知したとして、セキュリティインシデントを認めた。報道によれば、攻撃者は窃取した従業員のアクセストークンを使ってソースコードを複製・改変したとされ、同社は顧客保護のため緊急の対応を取ったという。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%A1%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <div class="masthead-top">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark" aria-hidden="true">◈</span>
+        <span class="brand-name">Security Incident Watch</span>
+      </a>
+    </div>
+    <h1><a href="../index.html">重大セキュリティ事故の記録</a></h1>
+    <p class="tagline">国内外の大規模な情報漏えいと重大な脆弱性から、<br class="br-sp">本当に影響の大きい事故だけを選んで記録します。</p>
+  </div>
+</header>
+<main class="wrap article">
+  <p class="breadcrumb"><a href="../index.html">記事一覧</a><span aria-hidden="true"> / </span>情報漏えい・侵害</p>
+  <header class="article-head">
+    <div class="hero-meta">
+      <span class="badge s-high">重要</span>
+      <span class="badge c-breach">情報漏えい・侵害</span>
+      <span class="meta-text">2026年11月27日 ・ 海外</span>
+    </div>
+    <h1>独SAP、GitHub上の不審活動でインシデント確認 ソースコード改変の報道</h1>
+    <p class="lead">独SAPは、自社のIT環境とGitHub上で不審な活動を検知したとして、セキュリティインシデントを認めた。報道によれば、攻撃者は窃取した従業員のアクセストークンを使ってソースコードを複製・改変したとされ、同社は顧客保護のため緊急の対応を取ったという。</p>
+    
+  </header>
+  <section class="article-section">
+  <h2>原因・侵入経路</h2>
+  <p>報じられている原因は、従業員のアクセストークン（システムにログインするための認証情報）の窃取と、GitHub上の開発リポジトリへの不正アクセスである。SAPは不審な活動の検知後に該当アクセスを遮断し、顧客向けの保護措置を講じたと説明しているが、侵入経路の詳細や改変されたコードの範囲は明らかにしていない。開発基盤そのものが狙われた点で、自社製品のサプライチェーン（供給網）への影響が焦点となる。</p>
+</section><section class="article-section">
+  <h2>影響・被害規模</h2>
+  <p>SAPのERP「S/4HANA」などは日本企業を含む世界中の基幹業務で使われており、影響は顧客企業の業務システムに波及し得る。現時点で顧客データの漏えいや製品への不正コード混入が起きたかどうかは明らかにされておらず、被害件数も不明。同社は詳細の調査を続けているとみられる。</p>
+</section><section class="article-section">
+  <h2>AI との関係</h2>
+  <p>AIの関与は確認されていない。ただしソースコードを扱う開発基盤が狙われた事例として、ビルド成果物の来歴（provenance）を署名で検証し、人の目視に頼らず改変を検知する仕組みを、AI生成コードの混入対策と同じ枠組みで整備しておくべき点が実務上の教訓となる。</p>
+</section>
+  
+  <section class="sources">
+    <h2>出典</h2>
+    <ul><li>
+  <a href="https://therecord.media/sap-germany-cyberattack-github" target="_blank" rel="noopener">Software giant SAP confirms cyber incident amid reports of source code breach</a>
+  <span class="src-meta">The Record ・ 2026年11月27日</span>
+</li><li>
+  <a href="https://www.bleepingcomputer.com/news/security/sap-confirms-security-incident-after-suspicious-github-activity/" target="_blank" rel="noopener">SAP confirms security incident after suspicious GitHub activity</a>
+  <span class="src-meta">BleepingComputer ・ 2026年11月27日</span>
+</li><li>
+  <a href="https://www.securityweek.com/sap-confirms-cyberattack-source-code-reportedly-compromised/" target="_blank" rel="noopener">SAP Confirms Cyberattack, Source Code Reportedly Compromised</a>
+  <span class="src-meta">SecurityWeek ・ 2026年11月27日</span>
+</li></ul>
+  </section>
+  <nav class="article-nav"><a class="nav-link" href="2026-11-27-switzerland-ai-agent-critical-infrastructure.html"><span>古い記事</span>スイス、AIエージェント使った攻撃で重要インフラ事業者の侵害を確認</a></nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-col">
+      <p class="footer-title">このサイトについて</p>
+      <p>国内外の報道から、社会的影響の大きいセキュリティ事故と重大な脆弱性だけを選び、原因・影響・AIとの関係を整理して記録しています。記事本文は AI による要約・編集を含みます。正確な情報は各出典をご確認ください。</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">アーカイブ</p>
+      <p><a href="../index.html">記事一覧</a> ／ <a href="https://github.com/HiroshiOkada/security-incident-news" target="_blank" rel="noopener">GitHub</a></p>
+      <p class="footer-meta">最終生成 2026-11-28 07:36 JST ／ 最終選定 2026-11-28 07:36 JST</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

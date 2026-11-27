@@ -1,6 +1,93 @@
 {
- "generated_at": "2026-11-27T07:38:29+09:00",
+ "generated_at": "2026-11-28T07:36:39+09:00",
  "incidents": [
+  {
+   "id": "2026-11-27-sap-github-source-code-breach",
+   "event_date": "2026-11-27",
+   "category": "breach",
+   "region": "world",
+   "severity": "high",
+   "title": "独SAP、GitHub上の不審活動でインシデント確認 ソースコード改変の報道",
+   "lead": "独SAPは、自社のIT環境とGitHub上で不審な活動を検知したとして、セキュリティインシデントを認めた。報道によれば、攻撃者は窃取した従業員のアクセストークンを使ってソースコードを複製・改変したとされ、同社は顧客保護のため緊急の対応を取ったという。",
+   "cause": "報じられている原因は、従業員のアクセストークン（システムにログインするための認証情報）の窃取と、GitHub上の開発リポジトリへの不正アクセスである。SAPは不審な活動の検知後に該当アクセスを遮断し、顧客向けの保護措置を講じたと説明しているが、侵入経路の詳細や改変されたコードの範囲は明らかにしていない。開発基盤そのものが狙われた点で、自社製品のサプライチェーン（供給網）への影響が焦点となる。",
+   "impact": "SAPのERP「S/4HANA」などは日本企業を含む世界中の基幹業務で使われており、影響は顧客企業の業務システムに波及し得る。現時点で顧客データの漏えいや製品への不正コード混入が起きたかどうかは明らかにされておらず、被害件数も不明。同社は詳細の調査を続けているとみられる。",
+   "ai_angle": "AIの関与は確認されていない。ただしソースコードを扱う開発基盤が狙われた事例として、ビルド成果物の来歴（provenance）を署名で検証し、人の目視に頼らず改変を検知する仕組みを、AI生成コードの混入対策と同じ枠組みで整備しておくべき点が実務上の教訓となる。",
+   "tags": [
+    "情報漏えい",
+    "ソフトウェアサプライチェーン",
+    "開発環境",
+    "海外"
+   ],
+   "keywords": [
+    "SAP",
+    "GitHub",
+    "ソースコード",
+    "アクセストークン",
+    "S/4HANA",
+    "サプライチェーン"
+   ],
+   "status": "ongoing",
+   "sources": [
+    {
+     "title": "Software giant SAP confirms cyber incident amid reports of source code breach",
+     "url": "https://therecord.media/sap-germany-cyberattack-github",
+     "publisher": "The Record",
+     "published": "2026-11-27"
+    },
+    {
+     "title": "SAP confirms security incident after suspicious GitHub activity",
+     "url": "https://www.bleepingcomputer.com/news/security/sap-confirms-security-incident-after-suspicious-github-activity/",
+     "publisher": "BleepingComputer",
+     "published": "2026-11-27"
+    },
+    {
+     "title": "SAP Confirms Cyberattack, Source Code Reportedly Compromised",
+     "url": "https://www.securityweek.com/sap-confirms-cyberattack-source-code-reportedly-compromised/",
+     "publisher": "SecurityWeek",
+     "published": "2026-11-27"
+    }
+   ],
+   "timeline": [],
+   "created_at": "2026-11-28T07:35:49+09:00",
+   "updated_at": "2026-11-28T07:35:49+09:00"
+  },
+  {
+   "id": "2026-11-27-switzerland-ai-agent-critical-infrastructure",
+   "event_date": "2026-11-27",
+   "category": "breach",
+   "region": "world",
+   "severity": "high",
+   "title": "スイス、AIエージェント使った攻撃で重要インフラ事業者の侵害を確認",
+   "lead": "スイスのサイバーセキュリティ機関（NCSC）は、AIエージェントを使った攻撃により国内組織のシステムが侵害された事例を確認したと明らかにした。確認された5件の攻撃のうち4件で侵入が成立し、3件は重要インフラの事業者が標的だった。同国でAI支援型の攻撃が確認されたのは初めてとされる。",
+   "cause": "NCSCによれば、攻撃者はAIエージェント（自律的にタスクを実行するAI）を用いて侵入活動を行った。偵察や侵入の工程の一部をAIが担ったとみられるが、技術的な侵入経路や悪用された脆弱性の詳細は公表されていない。",
+   "impact": "確認された5件のうち4件でシステムへの侵入が成立し、3件は重要インフラ事業者が標的だった。被害組織名や漏えいしたデータの種類・件数は公表されておらず不明。国家のサイバー機関がAI支援型攻撃の実例として確認した事例であり、重要インフラの防御体制への影響が懸念される。",
+   "ai_angle": "AIエージェントが実際の侵入に使われた確認例であり、試行回数をAIが稼ぐことで人間の監視を前提とした検知が追いつかなくなる。防御側もログ相関や一次切り分けにAIを投入し、検知から封じ込めまでの時間を短縮する運用を設計すべき点が具体的な示唆となる。",
+   "tags": [
+    "重要インフラ",
+    "AI",
+    "海外",
+    "国家系攻撃"
+   ],
+   "keywords": [
+    "スイス",
+    "NCSC",
+    "AIエージェント",
+    "重要インフラ",
+    "AI支援型攻撃"
+   ],
+   "status": "ongoing",
+   "sources": [
+    {
+     "title": "Switzerland Confirms AI-Assisted Cyberattacks Breached Critical Infrastructure Operators",
+     "url": "https://thehackernews.com/2026/11/switzerland-confirms-ai-assisted.html",
+     "publisher": "The Hacker News",
+     "published": "2026-11-27"
+    }
+   ],
+   "timeline": [],
+   "created_at": "2026-11-28T07:35:49+09:00",
+   "updated_at": "2026-11-28T07:35:49+09:00"
+  },
   {
    "id": "2026-11-26-mext-breach-160k",
    "event_date": "2026-11-26",
@@ -58,9 +145,17 @@
      "published": "2026-11-26"
     }
    ],
-   "timeline": [],
+   "timeline": [
+    {
+     "date": "2026-11-27",
+     "note": "文部科学省は、政府調達情報システムを構成するサーバが侵害され、関係者の個人情報が外部に流出した可能性があることを明らかにした。",
+     "url": "https://www.security-next.com/193439",
+     "publisher": "Security NEXT",
+     "title": "政府調達情報システムのサーバから個人情報流出か - 文科省"
+    }
+   ],
    "created_at": "2026-11-27T07:36:47+09:00",
-   "updated_at": "2026-11-27T07:36:47+09:00"
+   "updated_at": "2026-11-28T07:35:50+09:00"
   },
   {
    "id": "2026-11-25-keio-ransomware-data-breach",
@@ -114,10 +209,17 @@
      "url": "https://www.security-next.com/193305",
      "publisher": "Security NEXT",
      "title": "ランサム攻撃で個人情報流出、パスポート写しも - 京王電鉄"
+    },
+    {
+     "date": "2026-11-26",
+     "note": "京王グループはランサムウェア攻撃の調査結果を公表し、実際に漏えいが確認されたのは1.2万人で、影響範囲は1000万人超に及ぶと明らかにした。",
+     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1UVWJQNnhUa2lJZTJOaVVkOWxNZHl4YjdOSHItMGUyQlpqLV9NVmtVS3diakdnNEI5ejNnbDdjSDUzUzVObXd4Q1pxbFB1MXl6ZlVDbkEycFFJVFY5QjJ4eG1fVEU2WHBBVnZqMHB4T1Njdw?oc=5",
+     "publisher": "ITmedia",
+     "title": "京王グループ、ランサムウェア攻撃の調査結果を公表 「1.2万人」の漏えい確認、影響は1000万人超に"
     }
    ],
    "created_at": "2026-11-25T07:37:37+09:00",
-   "updated_at": "2026-11-26T07:35:33+09:00"
+   "updated_at": "2026-11-28T07:35:52+09:00"
   },
   {
    "id": "2026-11-24-cisco-expressway-cve-2026-76466",
@@ -504,10 +606,31 @@
      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSHdRR0xsLUFlcC12Wm9VUXBUWkpLTnlqa25zQTQ3ZDNQZElseWV1a3pHeTNRMF9GYVV4TWVsZDc4akh4SC1WRFNjOW5YY29mSTBMYmM4V2gwQjNrR2dBQ3BOSkM2MUp5cFhTdllrS3N1V21jYURnVlh3UEd5azVzc2ZBWVg2S21WS295YjBmaFRMVHh3Z1JheUhMVk1rcWc?oc=5",
      "publisher": "合同会社ロケットボーイズ",
      "title": "ピーチエア、最大約944万件の個人情報漏えい-プレイド「KARTE」のサイバー攻撃で契約終了後も顧客データが残存"
+    },
+    {
+     "date": "2026-11-27",
+     "note": "日本経済新聞が、本件不正アクセスにより約540万件の情報漏えいを公表した。",
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFAyMlpMNkpFWmQxZWdmZms1OEw0NzRqaTE5eWNPenQ0UUN0WmdnMG54OFRBNl9EZmw4NEtNZ0h2b3ViNFNaWWlPY243Z1FIRUJyeXlHSVNOZUZuY0xXakY0NU1VMUNqWmRWZE52bVc2R0tXckl6ajgtRHRWVnhWb28?oc=5",
+     "publisher": "Yahoo!ニュース",
+     "title": "日経540万件情報漏えい KARTE不正アクセスで（共同通信）"
+    },
+    {
+     "date": "2026-11-27",
+     "note": "三井ショッピングパークが、約312万人の会員情報漏えいを発表。アプリへの不正アクセスが原因とみられる。",
+     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFB2ZHlYOFpMc1U4VFZHclJZS0RNTmxhdXB0MnlObWRvekJmVmxfUTNCU3lWVEoxVHFwSWo3UTBYUDhCazJHUVhIaTlONGk2THpGbmRPSV91c1loUVJ4REN3M3ZnVWQ?oc=5",
+     "publisher": "Impress Watch",
+     "title": "三井ショッピングパーク、約312万人の情報漏えい 氏名・住所・電話番号など"
+    },
+    {
+     "date": "2026-11-27",
+     "note": "大阪大学が安否確認システムに登録された約5万2000件のメールアドレス漏えいを発表。メール配信業者への不正アクセスが原因とみられる。",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1zeEYxYTdmN19CWFFxckoyRk1pbzMxUG5EeGZpd3lrelE2Z2xFZ0k1VU05UE94eC1MeXQ0cGVyTmFQQldEazVkazhuQnd6dlZ1NVRxZ2R0LURHdw?oc=5",
+     "publisher": "TBS NEWS DIG",
+     "title": "大阪大学でまた情報漏えい 安否確認システムに登録のメアド約5万2000件 メール配信業者への不正アクセスが原因"
     }
    ],
    "created_at": "2026-11-21T07:37:12+09:00",
-   "updated_at": "2026-11-27T07:37:04+09:00"
+   "updated_at": "2026-11-28T07:36:21+09:00"
   },
   {
    "id": "2026-11-20-gss-government-breach",
@@ -1220,10 +1343,17 @@
      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBYUzRxczlyUHVGUlViNExNVXFlQ2NhZjk5MHViZU1yd19kMFdaQkZiTGtPOFQtbHQ1cnphX1dLR3FxM2lsbWZDSTFvZmpaUC1ONzNwT2sxaw?oc=5",
      "publisher": "X",
      "title": "楽天からパスワード初期化通知相次ぎ、利用者困惑広がる"
+    },
+    {
+     "date": "2026-11-27",
+     "note": "楽天証券が情報漏えいの影響で米株の23時間取引の開始を延期したことが分かった。顧客の間では不安が広がっており、同社の対応は続いている。",
+     "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9UVzFPLUVJUzNNbTJLMnpmYXRqWWZCMGFaT2p1ZUJZUEZvd3U1WXUtMVJENk8zTXU4UW1zdEd4Vnppb1RxblMyNlhzZkpEU0VhdHJJVjFENnNqOWpsX0E?oc=5",
+     "publisher": "沖縄タイムス社",
+     "title": "楽天証券、米株２３時間取引延期 情報漏えいで顧客に不安広がる"
     }
    ],
    "created_at": "2026-11-17T19:38:38+09:00",
-   "updated_at": "2026-11-25T07:37:37+09:00"
+   "updated_at": "2026-11-28T07:36:29+09:00"
   },
   {
    "id": "2026-11-17-jins-data-breach",
